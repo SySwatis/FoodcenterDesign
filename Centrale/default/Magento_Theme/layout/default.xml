@@ -1,0 +1,51 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   <!--  <head>
+        <link src="https://fonts.googleapis.com/css?family=Work+Sans" src_type="url" rel="stylesheet" type="text/css" />
+    </head> -->
+    <body>
+        
+        <attribute name="class" value="theme-centrale"/>
+
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/centrale/logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">126</argument>
+                <argument name="logo_img_height" xsi:type="number">67</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="footer-logo">
+            <arguments>
+                <argument name="logo_src" xsi:type="string">images/logo-footer.png</argument>
+            </arguments>
+        </referenceBlock>
+
+        <!-- Extra block links top menu  -->
+        <referenceBlock name="featured.menu">
+            <block class="Magento\Cms\Block\Block" name="featured.menu.image" as="featuredMenuImage">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">cen-default-fr-featured-menu-image</argument></arguments>
+            </block>
+        </referenceBlock>
+        
+        <!-- <move element="brands-list" destination="footer-container" after="form.subscribe"/> -->
+        <referenceContainer name="cms-links-footer-container" remove="true"/>
+
+        <referenceContainer name="links-footer">
+            <block class="Magento\Cms\Block\Block" name="links.footer.cms">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">cen-default-fr-cms-links-footer</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceContainer name="footer.social">
+            <block class="Magento\Cms\Block\Block" name="footer.social.links" as="footerSocialLinks">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">cen-default-fr-footer-social-links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+    </body>
+</page>

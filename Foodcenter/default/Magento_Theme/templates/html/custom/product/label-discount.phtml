@@ -1,0 +1,13 @@
+<?php
+		// Discount Label
+		$_helper = $this->helper('Magento\Catalog\Helper\Output');
+		$_product = $block->getProduct();
+
+		$htmlDataAttr = '';
+		$_getCustomAttr = $_product->getResource()->getAttribute('fcg_label');
+		if($_getCustomAttr) {
+			// $customAttrLabel = $_getCustomAttr->getStoreLabel();
+			$customAttrValue = $_getCustomAttr->getFrontend()->getValue($_product);
+			$htmlDataAttr = !empty($customAttrValue) ? ' data-discount="'.$block->escapeHtml($customAttrValue).'"' : '';
+		}
+?><div class="product-label-discount"<?= $htmlDataAttr ?>></div>

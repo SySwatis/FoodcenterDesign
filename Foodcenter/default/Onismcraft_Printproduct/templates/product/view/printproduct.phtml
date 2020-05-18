@@ -1,0 +1,124 @@
+<?php
+/**
+ * Onismcraft
+ * Copyright (C) 2019 Onismcraft <info@onismcraft.com>
+ *
+ * @category Onismcraft
+ * @package Onismcraft_Printproduct
+ * @copyright Copyright (c) 2019 Onismcraft (http://www.onismcraft.com/)
+ * @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
+ * @author Onismcraft <info@onismcraft.com>
+ */
+?>
+<?php $product = $block->getProduct(); 
+$helper = $this->helper('Onismcraft\Printproduct\Helper\Data');
+$allow = $helper->isAllowForCustomer();
+if($allow){
+    ?>
+<form id="print-product-pdf-form" data-mage-init='{"validation":{}}'  class="review-form" method="post" action="<?php echo $block->getUrl('printproduct/index/printpdf'); ?>" name="printproduct">
+    <div class="fieldset" tabindex="0">
+    <?php
+    if($helper->isAllowCustomization()){
+        if($helper->isAllowAttrSelection()){
+            $attributeSelection = $helper->getAttributeSelection($product->getId());
+            ?>
+            <div class="field">
+                    <label class="label">
+                        <span><?php echo __("Select Attribute for Print"); ?></span>
+                    </label>
+                    <div class="control">
+                        <select name="customizeattribute[]" class="multiselect admin__control-multiselect product-custom-option" title="" multiple="multiple">
+                            <?php foreach ($attributeSelection as $code => $attrvalue) {
+                                          ?>
+                                             <option value="<?php echo $code; ?>"><?php echo $attrvalue; ?></option>
+                                            <?php
+                                        }
+                           ?>
+                        </select>
+                    </div>
+            </div>
+            <?php
+        }
+        if($helper->isAllowColorSelection()){
+            ?>
+            <div class="field">
+                <label class="label">
+                    <span><?php echo __("Product Title Color"); ?></span>
+                </label>
+                <div class="control">
+                    <input type="text" class="input-text color" name="prodtitlecolor" value="">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">
+                    <span><?php echo __("Product Attribute Heading Color"); ?></span>
+                </label>
+                <div class="control">
+                    <input type="text" class="input-text color" name="attrheadingcolor" value="">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">
+                    <span><?php echo __("Product Attribute Color"); ?></span>
+                </label>
+                <div class="control">
+                    <input type="text" class="input-text color" name="attrvaluecolor" value="">
+                </div>
+            </div>
+            <?php
+        }
+        if($helper->isAllowSendEmail()){
+            ?>
+            <div class="field">
+                    <label class="label">
+                        <span><?php echo __("Select Option"); ?></span>
+                    </label>
+                    <div class="control">
+                        <select name="printaction" onchange="checkemailfield(this)" class="" title="">
+                            <option selected="selected" value="sendemail"><?php echo __("print & Send Email") ?></option>
+                            <option value="download"><?php echo __("Download"); ?></option>
+                           ?>
+                        </select>
+                    </div>
+            </div>
+            <div class="field required" id='sendemail'>
+                <label class="label">
+                    <span><?php echo __("Email"); ?></span>
+                </label>
+                <div class="control">
+                    <input type="text" class="input-text required-entry validate-email" name="receiveremail" value="">
+                </div>
+            </div>
+            <div class="field required" id='recname'>
+                <label class="label">
+                    <span><?php echo __("Name"); ?></span>
+                </label>
+                <div class="control">
+                    <input type="text" class="input-text required-entry" name="receivername" value="">
+                </div>
+            </div>
+            <?php
+        }
+    }
+?>
+    <input type="hidden" name="productid" value="<?php echo $product->getId(); ?>" /> 
+    <button  type="submit" title="<?php echo __("Download"); ?>" class="action large" id="product-addtocart-button">
+        <span><?php echo __("Download product sheet"); ?></span>
+    </button>
+    </div>
+</form>    
+<?php } ?>
+<script type="text/javascript">
+function checkemailfield(ref){
+    if(jQuery(ref).val()=='sendemail'){
+        jQuery("#sendemail").show();
+        jQuery("#recname").show();
+        jQuery("#print-product-pdf-form").removeAttr('target');
+    }
+    else{
+        jQuery("#sendemail").hide();
+        jQuery("#recname").hide();
+        jQuery("#print-product-pdf-form").attr('target','_blank');
+    }
+}    
+</script>

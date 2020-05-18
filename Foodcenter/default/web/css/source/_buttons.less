@@ -1,0 +1,65 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    //  Using buttons mixins
+
+    button {
+        .lib-css(border-radius, @button__border-radius);
+        &:active {
+            .lib-css(box-shadow, @button__shadow);
+        }
+    }
+
+    a.action.primary {
+        .lib-css(border-radius, 2px);
+        .lib-link-as-button();
+    }
+
+    .action {
+        .lib-css(border-radius, @button__border-radius);
+        &.primary, &.back, &.primary, &.change-password, &.action-auth-toggle {
+            .lib-button-primary();
+            text-transform: uppercase;
+        }
+        &.primary.continue {
+            .lib-icon-font(
+                @_icon-font-content: @icon-next,
+                //@_icon-font-size: 18px,
+                @_icon-font-position: after
+            )
+        }
+        &.back {
+            line-height: 1;
+            height: 40px;
+            .lib-icon-font(
+                @_icon-font-content: @icon-prev,
+                //@_icon-font-size: 18px,
+                @_icon-font-position: before
+            )
+        }
+    }
+
+    .box-actions .action.edit {
+        .lib-button-primary();
+        text-transform: uppercase;
+    }
+
+    .product-item .action.tocart.primary {
+        .lib-button-tocart();
+        text-transform: initial;
+    }
+
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .action.primary {
+        .lib-button-primary(@_button-font-size: 17px);
+    }
+}

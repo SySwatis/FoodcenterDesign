@@ -1,0 +1,51 @@
+
+ // .lib-font-face(
+ //     @family-name:'<any_font_name>',
+ //     @font-path: '@{baseDir}fonts/<path_to_font_file>',
+ //     @font-weight: <font_weight>,
+ //     @font-style: <font_style>
+ //     @font-display: <auto|block|fallback|option|swap>
+ // );
+
+//  .lib-font-face(
+//     @family-name,
+//     @font-path,
+//     @font-weight: normal,
+//     @font-style: normal
+// ) {
+//     @font-face {
+//         font-family: @family-name;
+//         src: url('@{font-path}.woff2') format('woff2'),
+//         url('@{font-path}.woff') format('woff');
+//         font-weight: @font-weight;
+//         font-style: @font-style;
+//     }
+// }
+
+// lib/web/fonts/
+
+// Avant Garde
+
+.lib-font-face(
+    @family-name:'Avant Garde',
+    @font-path: '@{baseDir}fonts/avantgarde/AvantGarde-Bold',
+    @font-weight: @font-weight__bold
+);
+.lib-font-face(
+    @family-name:'Avant Garde',
+    @font-path: '@{baseDir}fonts/avantgarde/AvantGarde-Medium',
+    @font-weight: @font-weight__regular
+);
+.lib-font-face(
+    @family-name:'Avant Garde Book',
+    @font-path: '@{baseDir}fonts/avantgarde/AvantGarde-Book',
+    @font-weight: @font-weight__regular
+);
+
+// BaronNeueBold
+
+.lib-font-face(
+    @family-name:'Baron Neue',
+    @font-path: '@{baseDir}fonts/baronneue/BaronNeueBold',
+    @font-weight: @font-weight__bold,
+);

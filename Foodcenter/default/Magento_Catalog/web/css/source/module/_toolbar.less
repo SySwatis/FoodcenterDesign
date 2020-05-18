@@ -1,0 +1,304 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Variables
+//  ---------------------------------------------
+
+@toolbar-mode-icon-font-size: 24px;
+@toolbar-element-background: @panel__background-color;
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .page-products {
+        .columns {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .toolbar {
+        &:extend(.abs-add-clearfix all);
+        label {
+            display: block;
+            font-weight: @font-weight__semibold;
+            font-size: 14px;
+        }
+    }
+
+    .toolbar-amount {
+        display: block;
+        line-height: @toolbar-mode-icon-font-size + 2;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+
+        .products.wrapper ~ .toolbar & {
+            display: none;
+        }
+    }
+
+    .toolbar-products {
+        margin-bottom: @indent__xl;
+        //padding: 0 @indent__s;
+        text-align: left;
+        &:extend(.abs-add-clearfix all);
+
+        .pages {
+            display: block;
+            
+            .products.wrapper ~ & {
+                display: block;
+            }
+          
+
+            .item {
+                &.pages-item-next {margin-right: 0;}
+                &.pages-item-previous {margin-left: 0;}
+            }
+
+            .items  {
+
+                 
+                    > li:not(.current):not(.pages-item-previous):not(.pages-item-next) {
+                        display: none;
+                    }
+                    > li.current + li {
+                        display: inline-block !important;
+                    }
+                    > li.pages-item-next {
+
+                        &:before {
+                            font-weight: normal;
+                            content: " ... ";
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+                    > li.pages-item-previous {
+                        &:after {
+                            font-weight: normal;
+                            content: " ... ";
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                    }
+
+                    > li.current strong {
+                        .lib-css(color, @theme__color__primary);
+                        padding: 0 16px;
+                    }
+                
+            }
+        }
+
+        .limiter {
+            
+            .control {
+                .lib-select-arrow();
+            }
+        }
+        // Append to title in main.js
+        .toolbar-amount {
+            display: none;
+        }
+
+       
+    }
+
+    .sorter {
+        
+        .lib-select-arrow();
+        margin-right: 20px;
+        // padding: 4px 0 0;
+        //  border-bottom: @border-width__base solid @border-color__base;
+        .products.wrapper ~ .toolbar & {
+            display: none;
+        }
+
+        .sorter-action {
+            position: relative;
+            top: -2px;
+        }
+
+        
+    }
+
+    .sorter-options {
+        margin: 0 0 0 7px;
+        width: auto;
+    }
+
+    .sorter-action {
+        vertical-align: top;
+        .lib-icon-font(
+            @icon-arrow-up,
+            @_icon-font-size: @icon-font-size_s,
+            @_icon-font-line-height: 32px,
+            @_icon-font-color: @header-icons-color,
+            @_icon-font-color-hover: @header-icons-color-hover,
+            @_icon-font-text-hide: true
+        );
+    }
+
+    .sorter {
+        .sort-desc {
+            &:before {
+                content: @icon-arrow-down;
+            }
+        }
+    }
+
+    .modes {
+        display: none;
+    }
+
+    .limiter-options {
+        margin: 0 5px 0 7px;
+        width: auto;
+    }
+
+    // .limiter-label {
+    //     font-weight: @font-weight__regular;
+    // }
+
+    .limiter {
+         > .control {
+            display: block !important;
+        }
+        &-text {
+             &:extend(.abs-visually-hidden all);
+        }
+    }
+
+    .toolbar {
+        .products.wrapper ~ & .limiter {
+            display: none;
+        }
+    }
+}
+
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .toolbar-products {
+        .sorter, .limiter, .pages {
+            width: 100%;
+            margin: 12px 0; 
+            float: left;
+        }
+         .pages  .items  {
+
+                    width: 100%;
+                    text-align: center;
+            }
+    }
+}
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .page-products {
+        .columns {
+            padding-top: 0;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .toolbar-products {
+        .sorter {
+            float: left;
+        }
+        .sorter, .limiter {
+            width: 23%;   
+        }
+        .pages {
+            margin-top: 30px;
+            float: right;
+            width: 49%;
+            .items {
+                float: right;
+            }
+        }
+    }
+
+    .toolbar-amount {
+        font-size: 14px;
+        float: right;
+        &:before {
+            content:"(";
+        }
+        &:after {
+            content:")";
+        }
+    }
+
+    // .modes {
+    //     display: inline-block;
+    //     float: right;
+    //     margin-right: @indent__base;
+
+    //     .products.wrapper ~ .toolbar & {
+    //         display: none;
+    //     }
+    // }
+
+    .modes-label {
+        &:extend(.abs-visually-hidden-desktop all);
+    }
+
+    .modes-mode {
+        .lib-css(color, @text__color__muted);
+        // border: 1px solid @border-color__base;
+        border-right: 0;
+        float: left;
+        font-weight: @font-weight__regular;
+        line-height: 1;
+        padding: 7px 10px;
+        text-align: center;
+
+        // &:not(.active) {
+        //     &:hover {
+        //         .lib-css(color, @text__color__muted);
+        //         background: darken(@toolbar-element-background, 7%);
+        //     }
+        // }
+
+        // &:last-child {
+        //     border-right: 1px solid @border-color__base;
+        // }
+
+        &.active {
+            .lib-css(color, @primary__color__light);
+        }
+
+        .lib-icon-font(
+            @icon-grid,
+            @_icon-font-size: @toolbar-mode-icon-font-size,
+            @_icon-font-text-hide: true,
+            @_icon-font-color: @text__color__muted,
+            @_icon-font-color-hover: @text__color__muted
+        );
+    }
+
+    .mode-list {
+        .lib-icon-font-symbol(@icon-list);
+    }
+
+    .page-products .toolbar .limiter {
+        float: right;
+    }
+
+    // .toolbar {
+    //     .products.wrapper ~ & .limiter {
+    //         display: none;
+    //        // float: left;
+    //     }
+    // }
+}

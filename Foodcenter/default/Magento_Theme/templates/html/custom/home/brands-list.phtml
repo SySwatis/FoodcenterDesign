@@ -1,0 +1,70 @@
+<div class="brands">
+    <div class="inner brands-list">
+        <h2><?= __('Our brands') ?></h2>
+        <?php $cmsBlock = $this->getChildHtml('brandsList'); if($cmsBlock) : ?>
+        <?php echo $cmsBlock  ?>
+        <?php else : ?>
+        <div class="content">
+            <ul class="">
+                <li><a href="#"><img src="<?= $this->getViewFileUrl("images/pacha/logo-vedina.png") ?>"></a></li>
+                <li><a href="#"><img src="<?= $this->getViewFileUrl("images/pacha/logo-gulnur.png") ?>"></a></li>
+                <li><a href="#"><img src="<?= $this->getViewFileUrl("images/pacha/logo-pacita.jpg") ?>"></a></li>
+                <li><a href="#"><img src="<?= $this->getViewFileUrl("images/pacha/logo-douceur-and-co.png") ?>"></a></li>
+                <li><a href="#"><img src="<?= $this->getViewFileUrl("images/pacha/logo-elma.png") ?>"></a></li>
+                <li><a href="#"><img src="<?= $this->getViewFileUrl("images/pacha/logo-umut.jpg") ?>"></a></li>
+                <li><a href="#"><img src="<?= $this->getViewFileUrl("images/pacha/logo-cemet.jpg") ?>"></a></li>
+            </ul>
+            <button type="button" class="button button-brands action primary" data-href="<?php echo $block->getUrl('brands'); ?>"><?= __('All brands') ?></button>
+        </div>
+    </div>
+        <?php endif ?>
+</div>
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $('.brands-list').find('ul').slick({
+              dots: true,
+              infinite: false,
+              speed: 300,
+              slidesToShow: 8,
+              slidesToScroll: 8,
+              dots: false,
+              centerMode: false,
+              variableWidth: false,
+              responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    infinite: true,
+                    centerMode: false,
+                    variableWidth: false,
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    centerMode: false,
+                    variableWidth: false,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    variableWidth: true
+                  }
+                }
+              ]
+            });
+        });
+    });
+</script>

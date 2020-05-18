@@ -1,0 +1,64 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * Product view template
+ *
+ * @see \Magento\Catalog\Block\Product\View\Description
+ */
+?>
+<?php
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+$_product = $block->getProduct();
+
+//$iconsArr = array(145=>'&#xe957',37=>'&#xe95f',33=>'&#xe955',3=>'&#xe956');
+
+$iconsArr = $block->getIcons();
+
+if (!$_product instanceof \Magento\Catalog\Model\Product) {
+    return;
+}
+
+$_call = $block->getAtCall();
+$_code = $block->getAtCode();
+$_className = $block->getCssClass();
+$_attributeLabel = $block->getAtLabel();
+$_attributeType = $block->getAtType();
+$_attributeAddAttribute = $block->getAddAttribute();
+
+$renderLabel = true;
+// if defined as 'none' in layout, do not render
+if ($_attributeLabel == 'none') {
+    $renderLabel = false;
+}
+
+if ($_attributeLabel && $_attributeLabel == 'default') {
+    $_attributeLabel = $_product->getResource()->getAttribute($_code)->getStoreLabel();
+}
+if ($_attributeType && $_attributeType == 'text') {
+    $_attributeValue = ($_helper->productAttribute($_product, $_product->$_call(), $_code)) ? $_product->getAttributeText($_code) : '';
+} else {
+    $_attributeValue = $_helper->productAttribute($_product, $_product->$_call(), $_code);
+}
+?>
+<?php if ($_attributeValue && $block->getAtList() && $block->getAtList() == 'list'): 
+		$attribute = $_product->getResource()->getAttribute($_code);
+?>
+<?php $optionArr = explode( ",",$_attributeValue ); ?>
+<?php if(is_array($optionArr)) : ?>
+    <div class="infos-labels">
+    <?php if ($renderLabel): ?><strong class="type"><?= /* @escapeNotVerified */ $_attributeLabel ?></strong><?php endif; ?>
+<ul><?php	foreach ($optionArr as $optionId) {
+			if ($attribute->usesSource()) {
+    			$optionText = $attribute->getSource()->getOptionText($optionId);
+			} ?>
+			<li><span data-option-id="<?= $optionId;?>" data-label-icon="<?= isset($iconsArr[$optionId]) ? '&#x'.$iconsArr[$optionId]: '';?>" class="icon"></span><span class="text"><?= $optionText;?></span></li>
+ <?php	} ?></ul>
+    </div>	
+<?php endif ?>
+<?php endif; ?>

@@ -1,0 +1,9 @@
+<!-- <a href="#tab-label-description" rel="more" class="anchor more more-details icon icon-plus"><?php echo __('More details') ?></a> -->
+<?php $logos=array('cb.png','mc-vrt-rev.png','visa-inc-logo.png','american-express-logo-2018.png','pay-pal.png'); ?>
+<div class="payment-info">
+	<ul class="payment-info-items">
+	<?php foreach ($logos as $logo): ?>
+		<li class="item-logo"><img src="<?php echo $this->getViewFileUrl("images/common/".$logo) ?>"></li>
+	<?php endforeach ?>
+	</ul>
+</div>

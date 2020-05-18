@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+ * Onismcraft
+ * Copyright (C) 2019 Onismcraft <info@onismcraft.com>
+ *
+ * @category Onismcraft
+ * @package Onismcraft_Printproduct
+ * @copyright Copyright (c) 2019 Onismcraft (http://www.onismcraft.com/)
+ * @license http://opensource.org/licenses/gpl-3.0.html GNU General Public License,version 3 (GPL-3.0)
+ * @author Onismcraft <info@onismcraft.com>
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+            <link src="Onismcraft_Printproduct::js/jscolor.js"/>
+        </head>
+    <body> 
+             
+        <referenceBlock name="product.info.details">
+          <block class="Magento\Catalog\Block\Product\View" ifconfig="onismesoft_printproduct/general/enabled" name="printproduct.tab" as="printproduct" template="Onismcraft_Printproduct::product/view/printproduct.phtml" group="detailed_info" >
+             <arguments>
+              <argument name="sort_order" xsi:type="string">22</argument>
+                <argument name="class" xsi:type="string">download-tab</argument>
+                <argument translate="true" name="title" xsi:type="string">Download</argument>
+             </arguments>
+          </block>
+        </referenceBlock>
+    </body>
+</page>

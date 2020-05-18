@@ -1,0 +1,58 @@
+ <div class="reinsurance">
+    <div class="inner">
+      <div class="reinsurance-list">
+        <div class="item service">
+            <div class="content">
+              <h4 class="reinsurance-title icon icon-support">À votre service</h4>
+              <p>Lorem ipsum dolor sit amet adicing elit maecenas sa faubus mollis interdum.</p>
+            </div>
+        </div>
+        <div class="item secure-payment">
+            <div class="content">
+                <h4 class="reinsurance-title icon  icon-payment-security">Paiement sécurisé</h4>
+                <p>Lorem ipsum dolor sit amet adicing elit maecenas sa faubus mollis interdum.</p>
+            </div>
+        </div>
+        <div class="item shipping">
+            <div class="content">
+              <h4 class="reinsurance-title icon icon-valid-delivery">Livraison rapide</h4>
+              <p>Lorem ipsum dolor sit amet adicing elit maecenas sa faubus mollis interdum.</p>
+            </div>
+        </div>
+        <div class="item stock-info">
+            <div class="content">
+              <h4 class="reinsurance-title icon icon-stock-valid">Stock temps réel</h4>
+              <p>Lorem ipsum dolor sit amet adicing elit maecenas sa faubus mollis interdum.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+    <script>
+    // https://kenwheeler.github.io/slick/
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $('.reinsurance-list').slick({
+              dots: true,
+              infinite: false,
+              speed: 300,
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              dots: false,
+              responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true
+                  }
+                }
+              ]
+            });
+        });
+    });
+</script>

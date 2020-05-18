@@ -1,0 +1,117 @@
+<!-- - cen-default-fr-grid-category-title
+-  cen-default-fr-grid-category-item-1-description
+- cen-default-fr-grid-category-item-1
+- cen-default-fr-grid-category-item-2
+- cen-default-fr-grid-category-item-3
+- cen-default-fr-grid-category-item-4
+- cen-default-fr-grid-category-item-5
+- cen-default-fr-grid-category-item-6
+-->
+<div class="grid-categories">
+    <div class="inner">
+        <div class="content">
+            <?php $cmsBlock = $this->getChildHtml('categoryTitle'); if($cmsBlock) : ?>
+            <?php echo $cmsBlock ?>
+            <?php else : ?>
+            <h2>Les indispensables pour vos clients</h2>
+            <p>Une sélection de nos meilleurs produits de grande consommation</p>
+            <?php endif ?>
+        </div>
+        <div class="items clearfix">
+            <div class="item item-1">
+                <div class="grid">
+                    <div class="content item-1-1">
+                        <?php $cmsBlock1 = $this->getChildHtml('categoryItem1'); if($cmsBlock1) : ?>
+                        <?php echo $cmsBlock1 ?>
+                        <?php else : ?>
+                        <img src="<?= $this->getViewFileUrl("images/centrale/chip-cirspy-delicious-1583884.jpg") ?>">
+                        <?php endif ?>
+                        <div class="wrap">
+                            <?php $cmsBlockItem1 = $this->getChildHtml('categoryDescription'); if($cmsBlockItem1) : ?>
+                            <?php echo $cmsBlockItem1 ?>
+                            <?php else : ?>
+                            <h3>Lorem ipsum dolor set amet</h3>
+                            <p>Lorem ipsum dolor set amet</p>
+                            <a href="#" class=""><?= __('View All') ?></a>
+                            <?php endif ?>
+                        </div>
+                        
+                    </div>
+                    <div class="content item-1-2">
+                        <?php $cmsBlockItem2 = $this->getChildHtml('categoryItem2'); if($cmsBlockItem2) : ?>
+                        <?php echo $cmsBlockItem2 ?>
+                        <?php else : ?>
+                            <img src="<?= $this->getViewFileUrl("images/centrale/barbecue-bbq-burger-2282532.jpg") ?>">
+                        <?php endif ?>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-2">
+                <div class="grid">
+                    <div class="content item-2-1">
+                        <?php $cmsBlockItem3 = $this->getChildHtml('categoryItem3'); if($cmsBlockItem3) : ?>
+                        <?php echo $cmsBlockItem3 ?>
+                        <?php else : ?>
+                        <img src="<?= $this->getViewFileUrl("images/centrale/berry-brownies-chocolate-2373520.jpg") ?>">
+                        <div class="wrap">
+                           <a href="#" class="">Halal</a>
+                        </div>
+                        <?php endif ?>
+                    </div>
+                    <div class="content item-2-2">
+                        <?php $cmsBlockItem4 = $this->getChildHtml('categoryItem4'); if($cmsBlockItem4) : ?>
+                        <?php echo $cmsBlockItem4 ?>
+                        <?php else : ?>
+                        <img src="<?= $this->getViewFileUrl("images/centrale/beef-burger.jpg") ?>">
+                        <?php endif ?>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-3">
+                <div class="grid item-3-1">
+                    <div class="content item-3-1">
+                        <?php $cmsBlockItem5 = $this->getChildHtml('categoryItem5'); if($cmsBlockItem5) : ?>
+                        <?php echo $cmsBlockItem5 ?>
+                        <?php else : ?>
+                        <img src="<?= $this->getViewFileUrl("images/centrale/beef-burrito-cuisine-327168.jpg") ?>">
+                        <div class="wrap">
+                            <a href="#" class="">Végan</a>
+                        </div>
+                        <?php endif ?>
+                    </div>
+                    <div class="content item-3-2">
+                        <?php $cmsBlockItem6 = $this->getChildHtml('categoryItem6'); if($cmsBlockItem6) : ?>
+                        <?php echo $cmsBlockItem6 ?>
+                        <?php else : ?>
+                        <img src="<?= $this->getViewFileUrl("images/centrale/shutterstock_255223777.jpg") ?>">
+                        <?php endif ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $('.grid-categories .items').slick({
+                slidesToShow: 1,
+                mobileFirst: true,
+                arrows: false,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 1439,
+                        settings: 'unslick'
+                    }
+                ]
+            });
+            $(window).on('resize', function() {
+                $('.grid-categories .items').slick('resize');
+            });
+        });
+    });
+</script>

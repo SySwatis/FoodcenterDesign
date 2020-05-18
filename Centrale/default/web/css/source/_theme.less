@@ -1,0 +1,321 @@
+// Layout
+
+@screen__xxl: 1920px;
+@layout__max-width: 1280px;
+@layout-inner__max-width: 1280px;
+@layout-column-main__sidebar-offset: 0%;
+@layout-column__sidebar-width: 3; // 3.484 = 360px
+
+
+// Global colors theme
+
+@text__color :#000;
+@theme__color__primary: #43a8b3;
+@theme__color__secondary: #63c3cd;
+@theme__color__gray: #7b7b7b;
+@theme__color__gray-light: #f5f5f5;
+@theme__color__gray-medium: @table__border-color;
+@theme__color__black: #212721;
+@preheader-color: #9a9a9a;
+@gray-light__background-color: @theme__color__gray-light;
+@footer__background-color: @color-white;
+
+
+//  Fonts & Icon Font
+
+@font-family-name__base: 'Avant Garde Book';
+@font-family-name__primary: 'Avant Garde';
+@font-family-name__secondary: 'Baron Neue';
+@font-family__base: @font-family-name__base, @font-family__sans-serif;
+@cms-links-font-family:@font-family-name__primary;
+
+@font-size__xxs: 9px;
+
+//@heading__font-family__base: @font-family-name__secondary, @font-family__sans-serif;
+
+
+@icons__font-path: '@{baseDir}fonts/icomoon';
+@icons__font-name: 'icomoon';
+
+@icon-font-size: 16px;
+@icon-font-size_l: 22px;
+@icon-font-size_m: 12px;
+@icon-font-size_s: 10px;
+@button-icon__font-size: @icon-font-size;
+@toolbar-mode-icon-font-size: @icon-font-size;
+@modal-action-close__font-size: @icon-font-size;
+
+
+// Font size & Heading
+
+@h1__font-weight: 400;
+@h2__font-weight: 700;
+// @h3__font-weight: 400;
+// @h4__font-weight: 400;
+// @h5__font-weight: 400;
+
+@h1__font-family: @font-family-name__secondary;
+@h2__font-family: @font-family-name__secondary;
+@h3__font-family: @font-family-name__primary;
+// @h4__font-family: @font-family-name__secondary;
+
+// @h3__font-size: ceil((@font-size__base * 2)); // 18px
+// @h3__font-color: @heading__color__base;
+// @h3__font-family: @heading__font-family__base;
+// @h3__font-weight: @heading__font-weight__base;
+// @h3__font-style: @heading__font-style__base;
+// @h3__line-height: @heading__line-height__base;
+// @h3__margin-top: @indent__base * .75;
+// @h3__margin-bottom: @indent__s;
+
+
+// Price
+
+@font-family-name__price: @font-family-name__secondary;
+@font-weight__price: @font-weight__bold;
+
+
+// Breadcrumbs
+
+@breadcrumbs-link__color: @theme__color__gray;
+@breadcrumbs__font-size: 14px;
+
+
+// Accordion
+
+@accordion-control__font-family:@font-family-name__secondary;
+
+@accordion-control__border-left: none;
+@accordion-control__border-right: none;
+@accordion-control__margin-bottom: 0;
+@accordion-control__height: 100px;
+@accordion-control__font-weight: @font-weight__regular;
+@accordion-control__color: @tab-control__active__color;
+@accordion-content__margin: 0 0 2px;
+@accordion-content__border: none;
+
+@accordion-control__font-size: 24px;
+
+
+// Rating
+
+@rating-icon__font-size: 18px;
+@rating-icon__color:#bfbfbf;
+@rating-icon__active__color: @theme__color__primary;
+@rating-icon__letter-spacing: 0;
+
+
+// Icons
+
+@header-icons-color: #212121;
+@cart-icon__font-size: @icon-font-size;
+@breadcrumbs-icon__font-size: 14px;
+@minicart-icons-color: @theme__color__primary;
+@theme_icon-font-color: @theme__color__gray;
+@checkout-sidebar-shipping-information-edit-icon__font-size: 18px;
+@checkout-sidebar-shipping-information-edit-icon__line-height: 18px;
+@checkout-progress-bar-item-element-inner__active__line-height: 1.6;
+@checkout-progress-bar-item-element-inner__active__font-size: 15px;
+
+
+//  Typography
+
+@link__hover__text-decoration: none;
+@link__active__text-decoration: none;
+
+
+// Heading
+
+@heading__font-weight__base: @font-weight__bold;
+@h1__font-size: 34px;
+
+
+// Forms
+
+@form-field-type-label-inline__align: left;
+@form-element-input__height: 42px;
+@form-element-input__select: 42px;
+
+
+// Buttons
+
+// @button-icon__use: false;
+@button__background: @color-white;
+@button__hover__background: transparent;
+@button__focus__background: transparent;
+@button__hover__color: @color-black_dark;
+@button__border: 2px solid @color-black_dark;
+@button__border-radius:2px;
+@button__padding: 10px 17px;
+@button-icon__vertical-align: middle;
+
+
+//  Primary button
+
+@button-primary__background: @theme__color__primary;
+@button-primary__hover__background: lighten(@theme__color__primary, 5%);
+@button-primary__color: @color-white;
+@button-primary__active__color: @color-white;
+@button-primary__hover__color:  @color-white;
+@button-primary__border: 2px solid @theme__color__primary;
+@button-primary__hover__border: 2px solid lighten(@theme__color__primary, 5%);
+@button__font-family:@font-family-name__primary;
+// @button-primary__font-size: 16px;
+
+
+// Pagers
+
+@pager-action__background: @theme__color__primary;
+@pager-action__color: @color-white;
+@pager-action__border: none;
+@pager-icon__font-size: @icon-font-size;
+@pager-border-active:none;
+@pager-icon__font-margin: 0;
+@pager__font-size: 14px;
+@pager__line-height: 24px;
+@pager-item__margin:0 16px;
+
+
+// Logo
+
+@logo-header-common__max-width: 80px;
+
+@logo-header-desktop__max-width: 126px;
+@logo-header-desktop__margin: -33px 40px 0 0;
+@logo-footer-desktop__width: 179px;
+
+
+// Link
+
+@link__color: #0a0a0a;
+@link__color-secondary: @theme__color__gray;
+@link__hover__color: @color-black_dark;
+@link__focus__color:@color-black_dark;
+@link__active__color: @color-black_dark;
+@font-size_desktop-header-links: 9px;
+
+
+// Navigation
+
+@navigation-level0-item__color: @text__color;
+@navigation-level0-item__font-size: 13px;
+@navigation__background: @color-white;
+@navigation-desktop-level0-item__color: @link__color-secondary;
+@navigation-level0-item__active__border-color: @theme__color__primary;
+@submenu-desktop-item__active__border-color: @theme__color__primary;
+@navigation-level0-item__text-transform: initial;
+
+@navigation-level0-item__padding: 10px 40px 8px 10px;
+
+@navigation-level0-item__active__background: @theme__color__primary;
+@navigation-level0-item__active__color: @color-white;
+
+
+@submenu-desktop__min-width: 100%;
+@submenu-desktop__border-width: 0;
+
+@account-nav-current-border-color: @theme__color__primary;
+
+@menu-mobile-item-level0-padding: 8px 40px 8px 20px;
+@menu-mobile-item-level0-min-height: 32px;
+
+@navigation-level0-item__border:  @color-gray82;
+
+
+// Minicart
+
+@minicart-qty__height:12px;
+
+
+// Table
+
+@table-cell__padding-horizontal: @indent__s;
+@table-cell__padding-vertical:  12px;
+@table-th__font-weight: @font-weight__regular;
+
+
+// Sidebar
+
+@sidebar__background-color: @gray-light__background-color;
+@sidebar-common__background-color:  @sidebar__background-color;
+
+
+// Filter
+
+@filter-link: @theme__color__gray;
+
+
+// Swatch
+
+@swatch-option__background: @color-white;
+@swatch-option-text__color: @theme__color__primary;
+@swatch-option__border: @border-width__base solid @theme__color__primary;
+
+@swatch-option__selected__outline: none;
+@swatch-option__hover__outline: none;
+
+@swatch-option-text__selected__background-color: @theme__color__primary;
+
+
+// Home
+
+@home-wrapper-background-color: #f5f8f8;
+@home-heading-text-transform: lowercase;
+
+
+// Blocks
+
+@block-shipping-info-font-family: @font-family-name__primary;
+@block-shipping-info-background-color: @theme__color__secondary;
+
+@block-newsletter__background-image__url: '../images/centrale/architecture-blur-building-358622.jpg';
+@block-newsletter__background-image__size: cover;
+@block-newsletter__background-image__position__x: 0;
+@block-newsletter__background-image__position__y: 50%;
+@block-newsletter__gradient__direction: bottom;
+@block-newsletter__gradient__opacity__start: 0.9;
+@block-newsletter__gradient__opacity__end: 0.1;
+@block-newsletter__gradient__z-index: 1;
+
+@block-newsletter-title__font-size: 30;
+@block-newsletter-title__font-family-name: @font-family-name__secondary;
+@block-newsletter-title__color: @color-white;
+
+
+// Global arrows pagination
+
+@slick-arrow__border-radius: 18px;
+@toggle-description__border-radius: 22px;
+@pager-action__border-radius:12px;
+
+
+// Slick
+
+@product-item-slick-slide__margin-right-left: 9px;
+
+
+// Footer
+
+@footer-social-h3__text-transform: initial;
+@footer-social-h3__font-family:@font-family-name__secondary;
+@footer-social-h3__font-weight:inherit;
+
+@footer-bottom-links__text-align: left;
+
+
+// Checkout
+
+@checkout-shipping-item__border: 0;
+@checkout-shipping-item-icon__background-color: none;
+@checkout-shipping-item-icon__color: @theme__color__primary;
+@checkout-shipping-item__margin: 20px 0;
+
+
+// Message
+
+@message__font-size: 14px;
+@message__padding: 20px;
+@message-icon__inner-padding-left: 50px;
+@message-icon__left: 5px;
+@message-icon__top: 28px;
+@message__margin: 0 0 @indent__base;

@@ -1,0 +1,60 @@
+ <div class="reinsurance background-image" style="background-image: url(<?php echo $this->getViewFileUrl("images/stokhall/cuisine-delicious-dinner-958545.jpg") ?>);">
+   <h2>Supermarché alimentaire pro et particulier</h2>
+    <div class="inner">
+      <div class="reinsurance-list">
+
+        <div class="item service">
+            <div class="content">
+              <h4 class="reinsurance-title icon icon-support">Expert</h4>
+              <p>Notre connaissance du marché nous permet de vous conseiller au mieux.</p>
+            </div>
+        </div>
+        <div class="item secure-payment">
+            <div class="content">
+              <h4 class="reinsurance-title icon  icon-payment-security">Livraison pro</h4>
+              <p>Grâce à notre service livraison soyez serein, nous vous livrons en temps et en heure<em>*</em>.</p>
+            </div>
+        </div>
+        <div class="item shipping">
+            <div class="content">
+              <h4 class="reinsurance-title icon icon-valid-delivery">Proximité</h4>
+              <p>Nous sommes à votre écoute et créons de la confiance entre vous et nous.</p>
+            </div>
+        </div>
+        <div class="item stock-info">
+            <div class="content">
+              <h4 class="reinsurance-title icon icon-stock-valid">Service drive</h4>
+              <p>Stokhall vous fait gagner du temps grâce à son service Drive.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
+    <script>
+    // https://kenwheeler.github.io/slick/
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $('.reinsurance-list').slick({
+              dots: true,
+              infinite: false,
+              speed: 300,
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              dots: false,
+              responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true
+                  }
+                }
+              ]
+            });
+        });
+    });
+</script>

@@ -1,0 +1,10 @@
+<?php 
+// https://magento.stackexchange.com/questions/106809/magento-2-how-to-get-attribute-of-product
+// https://devdocs.magento.com/guides/v2.3/ui_comp_guide/howto/price_rendering.html
+// getUnit
+$_product = $block->getProduct(); ?>
+<?php if ($_product->isSaleable()): ?>
+<div class="price-unit-tax">
+	<span class="price-tax"><?php echo $_product->getAttributeText('tax_class_id') ?></span>
+</div>
+<?php endif ?>

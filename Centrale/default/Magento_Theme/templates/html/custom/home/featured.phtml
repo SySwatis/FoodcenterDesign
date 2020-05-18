@@ -1,0 +1,69 @@
+	<div id="featured-main" class="featured main featured-image featured-main">
+		<div class="inner">
+			<div class="content clearfix">
+				<div class="main">
+					<div id="featured-left" class="content featured-left">
+						<?php $cmsBlock = $this->getChildHtml('featuredLeft'); if($cmsBlock) : ?>
+						<?php echo $cmsBlock  ?>
+						<?php else : ?>
+						<h2>Votre centrale<br>d'achat Alimentaire</h2>
+						<p>La première centrale d’achat de France dédiée au marché ethnique, elle compte <br>aujourd’hui des adhérents répartis sur tout le territoire national et européen.</p>
+						<a href="#" class="link link-button button">Voir tous les produits</a>
+						<ul>
+							<li>
+								<h3>95%</h3>
+								<p>du territoire<br>couvert</p>
+							</li>
+							<li>
+								<h3>1er</h3>
+								<p>à être<br>sur le marché</p>
+							</li>
+							<li>
+								<h3>650</h3>
+								<p>références<br>alimentaires</p>
+							</li>
+							<li>
+								<h3>+1000</h3>
+								<p>Articles de<br>cuisine du monde</p>
+							</li>
+						</ul>
+						<img alt="<?= __('La Centrale') ?>" src="<?php echo $this->getViewFileUrl("images/centrale/IMG_4690.jpg") ?>" />
+						<?php endif ?>
+					</div>	
+				</div>
+				<?php $cmsBlock = $this->getChildHtml('featuredRight'); if($cmsBlock) : ?>
+						<?php echo $cmsBlock  ?>
+						<?php else : ?>
+						<!-- <img alt="<?= __('La Centrale, la livraison') ?>" src="<?php echo $this->getViewFileUrl("images/centrale/centrale-ethnique-featured-right.png") ?>" /> -->
+						<video style="top:-25%" playsinline autoplay muted loop id="featuredVideo" data-src-mp4="<?php echo $this->getViewFileUrl("images/video.mp4") ?>">
+							<source id="mp4_src" type="video/mp4">
+						</video>
+				<?php endif ?>
+			</div>
+    	</div>
+    </div>
+ <script>
+    require([
+        'jquery',
+        'matchMedia'
+    ], function ($,matchMedia) {
+    	if($('#featuredVideo').length) {
+    		$('#featured-main').addClass('featured-video')
+			mediaCheck({
+    	        media: '(min-width: 980px)',
+    	        entry: function () {
+    	        	$('#featured-left').find('img').hide();
+    	        	var dataSrcMp4 = $('#featuredVideo').data('src-mp4');
+    	          	document.getElementById("mp4_src").src = dataSrcMp4;
+    				document.getElementById("featuredVideo").load(); 
+    	        },
+    	        exit: function () {
+    	        	$('#featured-left').find('img').show();
+    	        	document.getElementById("featuredVideo").pause();
+    	        	document.getElementById("mp4_src").src = "";
+    				document.getElementById("featuredVideo").load(); 
+    	        }
+    	    });
+    	}
+    });
+</script>

@@ -1,0 +1,62 @@
+<div class="promotions">
+    <div class="inner">
+        <?= $block->getChildHtml('promo')?>
+    </div>
+    <?= $block->getChildHtml('promo-item')?>
+</div>
+<script>
+    // https://kenwheeler.github.io/slick/
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            var desktopItems = 5;
+            if($('.small-list').length) {
+              desktopItems = 4;
+            }
+
+            if($('.before-include').find('.promo-item').length){
+              var el = $('.promotions .product-items');
+              $('.before-include').find('.promo-item').appendTo(el);
+            }
+
+            $('.promotions .products-grid ol').slick({
+              dots: true,
+              infinite: false,
+              speed: 300,
+              slidesToShow: desktopItems,
+              slidesToScroll: 1,
+              dots: false,
+              responsive: [
+              {
+                  breakpoint: 980,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                  }
+                },
+                {
+                  breakpoint: 800,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: true
+                  }
+                }
+              ]
+            });
+
+        });
+    });
+</script>

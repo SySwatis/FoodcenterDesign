@@ -1,0 +1,9 @@
+<!-- Cms Block / Widget -->
+<div class="shipping info block block-theme-color"><span>
+<?php $cmsBlock = $this->getChildHtml('shippingInfo'); if($cmsBlock) : ?>
+		<?= $cmsBlock  ?>
+	<?php else : ?>
+	<?= __('Free shipping from 60 euros purchase') ?>
+<?php endif ?>
+</span>
+</div>

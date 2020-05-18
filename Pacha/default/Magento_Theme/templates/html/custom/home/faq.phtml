@@ -1,0 +1,38 @@
+<div class="faq">
+	<div class="inner">
+		<h2><?= __('Nous répondons à vos questions') ?></h2>
+		<div class="content">
+			 <?php $cmsBlock = $this->getChildHtml('faq'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock ?>
+            <?php else : ?>
+			
+				<h4>Comment puis-je gérer mes délais de livraisons</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
+				<h4>Si je ne suis pas là, ma commande est-elle toujours d’actualité</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
+				<h4>J’ai un problème de paiement sur votre plateforme</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		
+			<?php endif ?>
+		</div>
+	</div>
+</div>
+<script>
+    require([
+        'jquery'
+    ], function ($) {
+
+		$( ".faq p" ).wrap( '<div class="item item-faq"></div>' );
+
+        $('.faq').find('h4').first().addClass('active');
+
+        $('.faq').find('h4').on('click',function(e){
+            e.preventDefault();
+            $('.faq').find('h4').not($(this)).removeClass('active');
+            $(this).addClass('active');
+        });
+
+});
+</script>

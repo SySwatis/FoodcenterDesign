@@ -1,0 +1,31 @@
+<!-- Container for our image gallery --> 
+<div class="home-slider"></div>
+ 
+<!-- Script that calls gallery widget --> 
+<script>
+require ([
+    'jquery',
+    'mage/gallery/gallery'
+], function ($, Gallery) {
+    $(function () {
+        $('.home-slider').each(function (index, element) {
+            Gallery({
+                options: {
+                    "nav": "false",
+                    "transition" :"fade",
+                    "arrows": "false"
+                },
+
+                data: [
+   {img: '<?php echo $this->getViewFileUrl("images/01pachadesignhome1280px-adult-business-commerce-375889.png") ?>', html: '<a class="button" href="">Link</a>',
+    thumb: 'https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/-/resize/96x/'},
+   {img: 'https://ucarecdn.com/a9ed82c6-14f1-462e-849e-3b007c2aae87/',
+    thumb: 'https://ucarecdn.com/a9ed82c6-14f1-462e-849e-3b007c2aae87/-/resize/96x/'}
+ ],
+                fullscreen: {},
+                breakpoints: {}
+            }, element);
+        });
+    });
+});
+</script>

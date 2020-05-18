@@ -1,0 +1,89 @@
+<div class="featured-main">
+		<div class=" clearfix">
+			
+				<div class="col">
+					<div class="content">
+						<h2>L'enseigne qui vous accompagne au quotidien</h2>
+						<p>Venez découvir nos produits issus de cuisine<br>au 4 coins du monde</p>
+					</div>
+					<a href="#" class="link link-button button">Commencer mon drive</a>
+					<span class="slick-slider"><span class="pagination"><span class="current-slide">01</span>/<span class="featured-main-list-count count">01</span></span></span>
+					<p class="current-slide-title"></p>
+				</div>
+	            <div class="col featured-main-list">
+	            
+		            	<div class="item">
+		            		<div class="content">
+			            		<a href="#"><img alt="Pomme de terre et cie" src="<?= $this->getViewFileUrl("images/stokhall/shutterstock_195499868.jpg") ?>"></a>
+			            		<h3>Fondantes et dorées</h3>
+			            		<p>Mini rosti, croquettes de fromage, délice de pomme de terre …</p>
+		            		</div>
+		            	</div>
+		            	<div class="item">
+		            		<div class="content">
+			            		<a href="#"><img alt="Pomme de terre au four" src="<?= $this->getViewFileUrl("images/stokhall/appetizer-bowl-delicious-1640772.jpg") ?>"></a>
+			            		<h3>Nos frites croustillantes</h3>
+			            		<p>Frites rustiques, longues, potatoes, super crunch …</p>
+		            		</div>
+		            	</div>
+		            	<div class="item">
+		            		<div class="content">
+			            		<a href="#"><img alt="Pomme de terre et cie" src="<?= $this->getViewFileUrl("images/stokhall/shutterstock_195499868.jpg") ?>"></a>
+			            		<h3>Fondantes et dorées</h3>
+			            		<p>Mini rosti, croquettes de fromage, délice de pomme de terre …</p>
+		            		</div>
+		            	</div>
+		            	<div class="item">
+		            		<div class="content">
+			            		<a href="#"><img alt="Pomme de terre et cie" src="<?= $this->getViewFileUrl("images/stokhall/appetizer-bowl-delicious-1640772.jpg") ?>"></a>
+			            		<h3>Nos frites croustillantes</h3>
+			            		<p>Frites rustiques, longues, potatoes, super crunch …</p>
+		            		</div>
+		            	</div>
+	            	</div>
+	           
+			
+    	</div>
+    	
+    </div>
+    
+    <script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+
+        	$('.featured-main-list').on('init', function(event, slick, currentSlide, nextSlide){
+            	var z = "";
+            	if(slick.slideCount<10) {
+            		var z = "0";
+            	}
+				$('.featured-main-list-count').text(z+(slick.slideCount));
+
+				$('.current-slide-title').text($('.slick-current').find('img').attr('alt'));
+            });
+
+            $('.featured-main-list').slick({
+                slidesToShow: 2,
+				appendArrows: $('.slick-slider'),
+	            responsive: [
+					{
+	             		breakpoint: 1280,
+	             		settings: {
+	             	  		slidesToShow: 1
+	             		}
+	              	}
+	            ]
+            }).on("afterChange", function(event, slick, currentSlide){
+            	var z = "";
+            	if(slick.slideCount<10) {
+            		var z = "0";
+            	}
+            	$('.current-slide').text(z+(currentSlide+1));
+            	$('.current-slide-title').text($('.slick-current').find('img').attr('alt'));
+
+			});
+        });
+    });
+	</script>

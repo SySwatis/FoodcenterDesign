@@ -1,0 +1,82 @@
+
+ // .lib-font-face(
+ //     @family-name:'<any_font_name>',
+ //     @font-path: '@{baseDir}fonts/<path_to_font_file>',
+ //     @font-weight: <font_weight>,
+ //     @font-style: <font_style>
+ //     @font-display: <auto|block|fallback|option|swap>
+ // );
+
+//  .lib-font-face(
+//     @family-name,
+//     @font-path,
+//     @font-weight: normal,
+//     @font-style: normal
+// ) {
+//     @font-face {
+//         font-family: @family-name;
+//         src: url('@{font-path}.woff2') format('woff2'),
+//         url('@{font-path}.woff') format('woff');
+//         font-weight: @font-weight;
+//         font-style: @font-style;
+//     }
+// }
+
+// lib/web/fonts/
+
+// Roboto
+
+.lib-font-face(
+    @family-name:'Roboto',
+    @font-path: '@{baseDir}fonts/roboto/Roboto-Bold',
+    @font-weight: @font-weight__bold
+);
+.lib-font-face(
+    @family-name:'Roboto',
+    @font-path: '@{baseDir}fonts/roboto/Roboto-Light',
+    @font-weight: @font-weight__light
+);
+.lib-font-face(
+    @family-name:'Roboto',
+    @font-path: '@{baseDir}fonts/roboto/Roboto-Regular',
+    @font-weight: @font-weight__regular
+);
+.lib-font-face(
+    @family-name:'Roboto',
+    @font-path: '@{baseDir}fonts/roboto/Roboto-Medium',
+    @font-weight: @font-weight__semibold
+);
+
+
+// Aquatico
+
+.lib-font-face(
+    @family-name:'Aquatico',
+    @font-path: '@{baseDir}fonts/aquatico/Aquatico-Regular',
+    @font-weight: @font-weight__regular
+);
+
+// Quicksand
+
+.lib-font-face(
+    @family-name:'Quicksand',
+    @font-path: '@{baseDir}fonts/quicksand/QuicksandBook-Regular',
+    @font-weight: @font-weight__regular
+);
+.lib-font-face(
+    @family-name:'Quicksand',
+    @font-path: '@{baseDir}fonts/quicksand/QuicksandBold-Regular',
+    @font-weight: @font-weight__bold
+);
+
+// // Font size
+// li,p,span {
+//     letter-spacing: -0.003em;
+// }
+p {
+   & {
+        .lib-font-size(14);
+        
+        line-height: 1.6;
+    }
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceBlock name="view.addto.compare" remove="true" />
+        <referenceBlock name="product.info.mailto" remove="true" />
+        <referenceBlock name="product.attributes" remove="true" />
+        <referenceBlock name="product.info.overview" remove="true" />
+    
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <!-- stock available -->
+        <move element="product.info.type" destination="page.main.title" before="product.info.stock.sku" />
+        <move element="view.addto.wishlist" destination="product.info.addtocart.additional" before="-" />
+        <move element="product.info.stock.sku" destination="page.main.title" before="-" />
+        <move element="product.info.review" destination="page.main.title" after="product.info.stock.sku" />
+        <move element="product.info.social" destination="product.info.main" after="-"/>
+
+        <referenceBlock name="product.info.price">
+            <block class="Magento\Catalog\Block\Product\View" name="product.info.tax" template="Magento_Theme::html/custom/product/info-prices.phtml" after="-" />
+        </referenceBlock>
+
+        <referenceBlock name="product.info.media">
+            <block class="Magento\Catalog\Block\Product\View" name="product.info.media.label.discount" template="Magento_Theme::html/custom/product/label-discount.phtml" />
+        </referenceBlock>
+
+        <referenceBlock name="product.info.stock.sku">
+            
+            <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.ean" template="Magento_Catalog::product/view/attribute.phtml" after="-">
+            <arguments>
+                <argument name="at_call" xsi:type="string">getFcg_ean</argument>
+                <argument name="at_code" xsi:type="string">fcg_ean</argument>
+                <argument name="css_class" xsi:type="string">sku ean</argument>
+                <!--  <argument name="at_label" xsi:type="string">default</argument> -->
+                <argument name="add_attribute" xsi:type="string">itemprop="ean"</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Catalog\Block\Product\View\Description" name="product.info.conditionnement" template="Magento_Catalog::product/view/attribute.phtml" after="-">
+            <arguments>
+                <argument name="at_call" xsi:type="string">getFcg_conditionnement</argument>
+                <argument name="at_code" xsi:type="string">conditionnement</argument>
+                <argument name="css_class" xsi:type="string">label conditionnement</argument>
+                <!--  <argument name="at_label" xsi:type="string">default</argument> -->
+                <argument name="add_attribute" xsi:type="string">itemprop="conditionnement"</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Template" name="product.info.more" template="Magento_Theme::html/custom/product/info-more.phtml" after="-" />
+
+        </referenceBlock>
+        
+        <referenceBlock name="product.info.extrahint">    
+            <block class="Magento\Catalog\Block\Product\View" name="product.info.labels" template="Magento_Catalog::product/view/attribute-options.phtml">
+                <arguments>
+                    <argument name="at_call" xsi:type="string">getFcg_certif</argument>
+                    <argument name="at_code" xsi:type="string">fcg_certif</argument>
+                    <argument name="css_class" xsi:type="string">certif all</argument>
+                    <!--  <argument name="at_label" xsi:type="string">default</argument> -->
+                    <argument name="icons" xsi:type="array">
+                        <item name="5748" xsi:type="string">e953</item>
+                        <item name="5749" xsi:type="string">e954</item>
+                        <item name="5776" xsi:type="string">e955</item>
+                        <item name="5777" xsi:type="string">e956</item>
+                        <item name="5778" xsi:type="string">e957</item>
+                        <item name="5779" xsi:type="string">e958</item>
+                        <item name="5780" xsi:type="string">e95e</item>
+                        <item name="5781" xsi:type="string">e95f</item>
+                        <item name="5782" xsi:type="string">e961</item>
+                    </argument>
+                    <argument name="at_list" xsi:type="string">list</argument>   
+                    <argument name="add_attribute" xsi:type="string">itemprop="certif"</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Framework\View\Element\Template" name="product.info.shipping" template="Magento_Theme::html/custom/product/info-shipping.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="product.info.payment" template="Magento_Theme::html/custom/product/info-payment.phtml" after="-" />
+        
+        </referenceBlock>
+       
+    </body>
+</page>

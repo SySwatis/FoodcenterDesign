@@ -1,0 +1,29 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Product list toolbar
+ *
+ * @var $block \Magento\Catalog\Block\Product\ProductList\Toolbar
+ */
+use Magento\Catalog\Model\Product\ProductList\Toolbar;
+?>
+<?php if ($block->getTotalNum() > 1): ?>
+<p data-amount="<?= $block->getTotalNum().' '.__('Items') ?>" class="toolbar-amount" id="toolbar-amount">
+    <span class="toolbar-number"><?= $block->getTotalNum() ?>
+    <?php /* @escapeNotVerified */ echo __('Items') ?></span>
+</p>
+<?php else: ?>
+<p data-amount="<?= $block->getTotalNum().' '.__('Item') ?>" class="toolbar-amount" id="toolbar-amount">
+      	<span class="toolbar-number"><?= $block->getTotalNum() ?>
+    <?php /* @escapeNotVerified */ echo __('Item') ?></span>
+
+</p>
+    <?php endif; ?>

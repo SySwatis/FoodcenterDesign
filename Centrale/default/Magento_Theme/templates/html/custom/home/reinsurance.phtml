@@ -1,0 +1,24 @@
+ <div class="reinsurance">
+    <div class="inner">
+        <div class="content clearfix">
+            <div class="col col-40 box-shadow-image">
+                <div class="mask">
+                    <?php $cmsBlock = $this->getChildHtml('reinsuranceLeft'); if($cmsBlock) : ?>
+                    <?php echo $cmsBlock  ?>
+                    <?php else : ?>
+                    <img alt="L'équipe" src="<?= $this->getViewFileUrl("images/centrale/shutterstock_255223777.jpg") ?>">
+                    <?php endif; ?>
+                </div>
+            </div>
+            <div class="col col-60">
+                <?php $cmsBlock = $this->getChildHtml('reinsuranceRight'); if($cmsBlock) : ?>
+                    <?php echo $cmsBlock  ?>
+                <?php else : ?>
+                <h2>La première centrale<br>d’achat dédiée</h2>
+                <p>Nos équipes de professionnels assurent la coordination, le suivi commercial, la logistique et l’accompagnement de chacun de ses clients, en couvrant 95% du marché.<br>Spécialisés dans les produits ethniques, nous commercialisons plus de 650 références à destination de la restauration rapide, recouvrant tous vos besoins avec des produits choisis de façon rigoureuse afin de proposer des prix attractifs.</p>
+                <a href="<?php echo $block->getUrl() ?>a-propos" class="link link-button button">En savoir plus</a>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>

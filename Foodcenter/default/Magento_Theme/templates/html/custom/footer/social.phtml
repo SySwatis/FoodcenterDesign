@@ -1,0 +1,11 @@
+<div class="socials">
+	<h3><?= __('Follow us') ?></h3>
+	<?php $cmsBlock = $this->getChildHtml('footerSocialLinks'); if($cmsBlock) : ?>
+	<?php echo $cmsBlock  ?>
+	<?php else : ?>
+	<ul>
+		<li><a class="icon icon-facebook" href="#"><span>FaceBook</span></a></li>
+		<li><a class="icon icon-linkedin" href="#"><span>Linkedin</span></a></li>
+	</ul>
+	<?php endif ?>
+</div>

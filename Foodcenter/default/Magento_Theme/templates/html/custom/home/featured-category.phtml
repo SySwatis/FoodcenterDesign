@@ -1,0 +1,46 @@
+
+    <div class="featured-category featured-image main responsive">
+        <div class="inner vertical-align">
+            <div class="content">
+                <h2 class="featured-title">Nos produits tendance New York</h2>
+                <a href="#" class="link link-button button">Voir tous nos produits</a>
+                <img alt="NOS PRODUITS TENDANCE NEW YORK" src="<?php echo $this->getViewFileUrl("images/pacha/jakub-kapusnak-296880-unsplash.jpg") ?>">
+            </div>
+        </div>	
+    </div>
+    <div class="featured-category-list">
+        <div class="inner">
+            <?= $block->getChildHtml('featured-category-list') ?>
+        </div>
+    </div>
+	<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $('.featured-category-list .product-items').slick({
+                slidesToShow: 3,
+                responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: true
+                  }
+                }
+              ]
+            });
+        });
+    });
+	</script>

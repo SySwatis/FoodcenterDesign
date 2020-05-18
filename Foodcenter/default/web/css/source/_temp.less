@@ -1,0 +1,79 @@
+//
+//  less temporaire, modifications globales
+//  _____________________________________________
+//
+//  All
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+	.theme-pacha {
+
+	}
+	.theme-stokhall {
+
+	}
+	.theme-centrale {
+
+	}
+
+	// All themes
+
+	.categories-image-list {
+	    display: flex;
+	    flex-wrap: wrap;
+	    margin: 0;
+	    padding: 0;
+	    list-style: none;
+	    justify-content: center;
+	}
+	.categories-image-list li {
+	    padding: 15px;
+	}
+	.categories-image-list li img,  img.image.initial.loading {
+	    width: 210px;
+	    height: 210px;
+	    background-color: #f8f8f8f8;
+	    display: block;
+	}
+}
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+	
+	.theme-pacha {
+
+	}
+	.theme-stokhall {
+
+	}
+	.theme-centrale {
+
+	}
+
+	// All themes
+
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+	.theme-pacha {
+
+	}
+	.theme-stokhall {
+
+	}
+	.theme-centrale {
+
+	}
+
+	// All themes
+
+}

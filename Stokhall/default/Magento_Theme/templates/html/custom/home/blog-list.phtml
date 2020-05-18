@@ -1,0 +1,70 @@
+<div class="blog-list">
+	<div class="inner clearfix">
+		<div class="col-1">
+			<div class="content">
+				<h2>Les recettes</h2>
+				<p><b>Stokhall vous simplifie la vie, </b><br>Venez découvrir nos recettes, pour en faire les nouveaux plats favoris de votre menu</p>
+				<a href="#" class="link link-button button">Toutes nos recettes</a>
+			</div>
+		</div>
+		<div class="col-2">
+			<div class="items">
+				<div class="item">
+					<div class="content">
+						<img src="<?= $this->getViewFileUrl("images/stokhall/burger-cheeseburger-chicken-1484669.jpg") ?>">
+						<h3>L’unique chicken burger</h3>
+						<a class="link-product link-widget">Voir le produit</a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="content">
+						<img class="full-height" src="<?= $this->getViewFileUrl("images/stokhall/shutterstock_614616038-thee ramadan.jpg") ?>">
+						<h3>Les merveilleuses pitas</h3>
+						<a class="link-product link-widget">Voir le produit</a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="content">
+						<img src="<?= $this->getViewFileUrl("images/stokhall/anise-aroma-art-277253.jpg") ?>">
+						<h3>Haute Savoie</h3>
+						<a class="ink-product link-widget">Voir le produit</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+        $(document).ready(function () {
+            $('.blog-list .items').slick({
+                slidesToShow: 2,
+				appendArrows: $('.arrows'),
+				centerMode: false,
+	            responsive: [
+	            	{
+	             		breakpoint: 1440,
+	             		settings: {
+	             	  		slidesToShow: 3
+	             		}
+	              	},
+	              	{
+	             		breakpoint: 780,
+	             		settings: {
+	             	  		slidesToShow: 2
+	             		}
+	              	},
+					{
+	             		breakpoint: 480,
+	             		settings: {
+	             	  		slidesToShow: 1
+	             		}
+	              	}
+	            ]
+            });
+        });
+    });
+	</script>

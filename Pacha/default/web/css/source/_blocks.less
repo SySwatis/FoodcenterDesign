@@ -1,0 +1,682 @@
+// Blocks (Foodcenter)
+
+@block-reinsurance-icon-font-color: @theme_icon-font-color;
+@block-reinsurance-icon-font-size: 66px;
+@block-reinsurance-margin: 0 8px 20px;
+
+// Desktop
+
+// Common
+
+& when (@media-common = true) {
+
+    .how-it-works {
+        text-align: center;
+        height: 0;
+        padding: 42px 30px 156px;
+        position: relative;
+        box-sizing: border-box;
+        h3 {
+            padding: 0 30px;
+            margin-top: 0;
+            .lib-font-size(25);
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .steps {
+        position: relative;
+        margin-top: -86px;
+        display: flex;
+        max-width: 900px;
+        margin-bottom: 30;
+        z-index: 1;
+        .step {
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #FFF;
+            width: 30%;
+            border-radius: 4px;
+            h4 {
+                font-size: 15px;
+                margin: 20px 40px 20px;
+                }
+            &.shipping .ico-image {
+                margin-top: 16px;
+                height: 44px !important;
+            }
+            .ico-image {
+                width: 100%;
+                height: 60px;
+                position: relative;
+                display: inline-block;
+                line-height: 60px;
+                img {
+                    margin: 0 auto;
+                    max-height: 100%;
+                    min-height: 100%;
+                }
+            }
+        }
+    }
+
+	.link-button.button {
+		margin: 20px 0;
+		padding: 9px 6px;
+		border: 1px solid #FFF;
+		color: #FFF;
+		text-transform: uppercase;
+		font-weight: 700;
+		display: inline-block;
+		word-wrap: normal;
+		.lib-font-size(12);
+	}
+
+    .bg-color {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        p {
+            font-weight: 700;
+        }
+        &:before {
+            background-size: cover;
+            background-position: center center;
+            z-index: -1;
+            position: absolute;
+            display: block;
+            top: 0;
+            left:0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            content: " ";
+        }
+        &.green:before {
+            background-image: url(../images/pattern-1.png);
+            opacity: 0.15;
+        }
+        &.red:before {
+            background-image: url(../images/pattern-2.png);
+            opacity: 0.15;
+        }
+        &.white:before {
+            background-image: url(../images/pattern-5.png);
+        }
+    }
+
+    .bg-color.red {
+        color: #FFF;
+        background-color: @theme__color__primary;
+    }
+
+    .bg-color.green {
+        color: #FFF;
+        background-color: @theme__color__secondary;
+    }
+
+    .bg-color.white {
+        background-color: #fff;
+    }
+
+	.featured {
+        &-image {
+            .lib-gradient-image();
+            color: @color-white;
+            p {
+                font-weight: 700;
+            }
+        }
+		&-main {
+            text-align: center;
+            h1, h2 {
+                .lib-font-size(34);
+                font-weight: 400;
+            }
+        }    
+        &-category {
+            color: @color-white;
+			.content {
+				h2 {
+					.lib-font-size(30);
+                    font-weight: 400;
+                    max-width: 600px;
+                    margin: 0 auto;
+				}
+                margin-bottom: 30px;
+            }
+            padding-bottom: 150px;
+            &-list {
+                max-width: 777px;
+                margin-top: -176px;
+                margin-bottom: 50px;
+                .block-title  {
+                    display: none; //  prevent design and hide widget title
+                }
+                .product {
+                    &-item {
+                        margin: 0 2px 0 !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .promotions {
+        h2,h3 {
+            .lib-font-size(24);
+            line-height: 40/24;
+        }
+        margin-bottom: 70px;
+        .block-products-list {
+            margin-bottom: 0;
+        }
+        .product-item {
+            &.promo-item {
+                display: flex;
+                .bg-color {
+                    display: flex;
+                    flex:1;
+                }           
+            }
+        }
+    }
+
+    .cms-home .block-products-list {
+        .product-item {
+      
+            background-color: #FFF;
+            
+        }
+    }
+
+    .reinsurance {
+        background-color: #FFF;
+        margin-bottom: 70px;
+        .slick-dots {
+            bottom: -9px !important;
+        } 
+        > .inner {
+            background-color: #FFF;
+            max-width: @layout-inner__max-width;
+            margin-bottom: 60px;
+        }
+        .item {
+            padding: 30px;
+            box-sizing: content-box;
+            h4 {
+                text-transform: uppercase;
+            }
+            p {
+                margin-bottom: 20px;
+            }
+            .icon {
+                &.icon-support {
+                    .lib-icon-font(
+                        @_icon-font-content: @icon-support,
+                        @_icon-font-size: @block-reinsurance-icon-font-size,
+                        @_icon-font-line-height: 1,
+                        @_icon-font-text-hide: false,
+                        @_icon-font-color: @block-reinsurance-icon-font-color,
+                        @_icon-font-color-hover: @theme_icon-font-color,
+                        @_icon-font-color-active: @theme_icon-font-color,
+                        @_icon-font-margin: 0 8px 20px
+                    );
+                }
+                &.icon-payment-security {
+                    .lib-icon-font(
+                        @_icon-font-content: @icon-payment-security,
+                        @_icon-font-size: @block-reinsurance-icon-font-size,
+                        @_icon-font-line-height: 1,
+                        @_icon-font-text-hide: false,
+                        @_icon-font-color: @block-reinsurance-icon-font-color,
+                        @_icon-font-color-hover: @theme_icon-font-color,
+                        @_icon-font-color-active: @theme_icon-font-color,
+                        @_icon-font-margin: 0 8px 20px
+                    );
+                }
+                &.icon-valid-delivery {
+                    .lib-icon-font(
+                        @_icon-font-content: @icon-valid-delivery,
+                        @_icon-font-size: @block-reinsurance-icon-font-size,
+                        @_icon-font-line-height: 1,
+                        @_icon-font-text-hide: false,
+                        @_icon-font-color: @block-reinsurance-icon-font-color,
+                        @_icon-font-color-hover: @theme_icon-font-color,
+                        @_icon-font-color-active: @theme_icon-font-color,
+                        @_icon-font-margin: 0 8px 20px
+                    );
+                }
+                &.icon-stock-valid {
+                    .lib-icon-font(
+                        @_icon-font-content: @icon-factory,
+                        @_icon-font-size: @block-reinsurance-icon-font-size,
+                        @_icon-font-line-height: 1,
+                        @_icon-font-text-hide: false,
+                        @_icon-font-color: @block-reinsurance-icon-font-color,
+                        @_icon-font-color-hover: @theme_icon-font-color,
+                        @_icon-font-color-active: @theme_icon-font-color,
+                        @_icon-font-margin: 0 8px 20px
+                    );
+                }
+                &:before {
+                    display: block !important;
+                }
+            }
+        }
+    }
+
+    .grid-categories {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: @layout-inner__max-width;
+        margin: 0 auto;
+        p {
+            .lib-font-size(14);
+        }
+    }
+    
+    .about-us {
+        h2 {
+            font-weight: 400;
+            text-align: left;
+        }
+        h2,h3,h4 {
+            color: @theme__color__primary;
+        }
+        .featured-image {
+            img {
+                max-width: 100%;
+            }
+        }
+        .bg-color {
+            .inner {
+                max-width: 500px;
+                margin: auto;
+            }
+        }
+        .content {
+            text-align: left;
+            line-height: 1.6;
+            font-weight: 700;
+        }
+    }
+
+    .contact-us {
+        text-align: center;
+        .bg-color {
+            .inner {
+                max-width: 400px;
+                p {
+                    font-size: 14px;
+                    margin-top: 20px;
+                    font-weight: 400;
+                }
+            }
+            &:before{
+                background: transparent;
+            }
+        }
+        .contact-form {
+            text-align: left;
+            .fieldset {
+                margin-bottom: 20px;
+                > .field:not(.choice) > .label {
+                    float: none;
+                    width: auto;
+                    .lib-font-size(12);
+                    text-align:left;
+                }
+            }
+           .inner{ 
+                position: relative;
+                z-index: 2;
+                padding: 60px 20px;
+            }
+            .field.note {
+                &:extend(.abs-visually-hidden all);
+            }
+            div.mage-error {
+                display: none;
+            }
+            .legend {
+                text-transform: uppercase;
+                .lib-font-size(22px);
+                font-weight: 700;
+            }
+            color: @color-white;
+            label.label {
+                &:after {
+                    content: "";
+                }
+                display: block;
+                text-transform: uppercase;
+                float: none;
+                width: 100%;
+            }
+            .actions-toolbar {
+                margin-right: 0;
+                margin-left: 30%;
+                .lib-clearfix();
+            }
+            .primary {
+                float: right;
+                margin-right: 0;
+                background-color: @theme__color__secondary;
+                border-color: @theme__color__secondary;
+            }
+        }
+
+        .icon {
+            &:before {
+                display: block !important;
+                padding-bottom: @indent__xs;
+            }
+            &.icon-location {
+                .lib-icon-font(
+                        @_icon-font-content: @icon-location,
+                        @_icon-font-size: 30px,
+                        @_icon-font-line-height: 1,
+                        @_icon-font-text-hide: false,
+                        @_icon-font-color: @color-white,
+                        @_icon-font-color-hover: @color-white,
+                        @_icon-font-color-active: @color-white,
+                        @_icon-font-margin: 0 8px,
+                        @_icon-font-display: block
+                );
+            }
+            &.icon-phone {
+                .lib-icon-font(
+                        @_icon-font-content: @icon-phone,
+                        @_icon-font-size: 24px,
+                        @_icon-font-line-height: 1,
+                        @_icon-font-text-hide: false,
+                        @_icon-font-color: @color-white,
+                        @_icon-font-color-hover: @color-white,
+                        @_icon-font-color-active: @color-white,
+                        @_icon-font-margin: 0 8px,
+                        @_icon-font-display: block
+                );
+            }
+            &.icon-hours {
+                .lib-icon-font(
+                        @_icon-font-content: @icon-hours,
+                        @_icon-font-size: 24px,
+                        @_icon-font-line-height: 1,
+                        @_icon-font-text-hide: false,
+                        @_icon-font-color: @color-white,
+                        @_icon-font-color-hover: @color-white,
+                        @_icon-font-color-active: @color-white,
+                        @_icon-font-margin: 0 8px,
+                        @_icon-font-display: block
+                );
+            }
+        }
+    }
+
+    .brands {
+        background-color: #fcf9f9;
+        h2 {
+            font-family: @font-family-name__secondary;
+            .lib-font-size(34);
+            font-weight: 400;
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+   
+ }
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .cms-home {
+        
+        .steps .step {
+            margin: 0 20px;
+        }
+        .lib-responsive(40%);
+        .contact-us{   
+            .contact-form {
+                .actions-toolbar {
+                    margin-right: 18%;
+                }
+            }
+        }
+    }
+}
+
+& when (@media-target = 'desktop') {
+
+    .steps, .featured-category-list, .grid-categories, .reinsurance-list {
+        margin-left: auto;
+        margin-right: auto;
+    }
+	
+	.featured {
+		&-main {
+		h1, h2 {
+			.lib-font-size(51);
+                max-width: 600px;
+            }
+        }
+	}
+
+    .promotions {
+        h2,h3 {
+            .lib-font-size(21);
+        }
+        .product-item {
+            .product-item-name {
+                .lib-font-size(19.5);
+            }
+        }
+    }
+
+    .featured-category-list {
+        .product-item {
+            .product-item-name {
+                .lib-font-size(18.5);
+            }
+        }
+    }
+    
+    .reinsurance {
+        background: transparent;
+    }
+
+    .about-us {
+        h2 {
+            .lib-font-size(40);
+        }
+        p {
+            .lib-font-size(15);
+        }
+    }
+
+    .cms-home {
+
+        .steps .step {
+            padding: 40px 20px;
+        }
+
+        .reinsurance, .about-us {
+            margin-bottom: 90px;
+        }
+
+    }
+     
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+
+    .cms-home {
+
+        .how-it-works {
+            padding: 40px 30px 170px;
+        }
+
+        .steps {
+            margin-top: -140px;
+        }
+        .featured-image {
+            &.featured-main, &.featured-category {
+                img {
+                    top:-25vh;
+                }
+            }
+        }
+
+        .promotions {
+            h2 {
+                display: block;
+                text-align: center;
+                margin-top: 0;
+            }
+            > .inner {
+                padding: 30px 0;
+            }
+            .product-item {
+                flex: 1;
+                &.promo-item {
+                    order:-3;
+                }
+                &:nth-child(1),&:nth-child(2) {
+                    order:-4 !important;
+                }
+            }
+        }
+
+        .featured {
+            &-category { 
+                .content {
+                    h2 {
+                        .lib-font-size(40);
+                    }
+                }
+                &-list {
+                    margin-top: -186px;
+                    margin-bottom: 25px;
+                    .block {
+                        margin-bottom: 0;
+                    }
+                    .slick-slider {
+                        .slick-arrow {
+                            top: 105px;
+                            z-index: 2;
+                            background-color: transparent;
+                            &.slick-next {
+                                right: -40px;
+                            }
+                            &.slick-prev {
+                                left: -40px;
+                            }
+                            &:before {
+                                font-size: 32px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .reinsurance .inner {
+            padding: 0 60px;
+            h4 {
+                .lib-font-size(15);
+            }
+            .item {
+                padding:10px 30px;
+            }
+        } 
+
+        .grid-categories {
+            .lib-responsive(50%);
+            > div {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                &.bg-color {
+                    width: 30%;
+                }
+                &:not(.bg-color) {
+                    width: 70%;
+                }
+                .content {
+                    max-width: 300px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        .about-us, .contact-us {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .contact-us {
+            .bg-color {
+                flex:40%;
+                h3 {
+                    .lib-font-size(22);
+                }
+            }
+            .featured-image {
+                flex:60%;
+            }
+            .contact-form {
+                .actions-toolbar {
+                    margin-right: 18%;
+                }
+                .fieldset {
+                    margin-bottom: 0;
+                    padding: 20px 20px 20px 35%;
+                }
+                .legend {
+                    position: absolute;
+                    text-align: center;
+                    width: 30%;
+                    left:35px;
+                    top:50%;
+                    margin-top: -10px;
+                }
+                .inner {
+                    padding: 60px;
+                }
+            }
+        }
+
+        .about-us {
+            .featured-image {
+                height: 0;
+                padding-bottom:40%;
+                flex: 40%;
+            }
+            .bg-color {
+                 flex: 60%;
+                .inner {
+                    max-width: 600px;
+                    padding: 30px;
+                    margin: auto;
+                }
+            }
+            > div {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+        }
+
+        .brands {
+            padding: 0;
+            margin: 45px 0;
+        }
+        
+    }
+
+}

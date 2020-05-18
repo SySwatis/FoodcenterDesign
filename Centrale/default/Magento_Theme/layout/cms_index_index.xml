@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+ 
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.top">
+            
+            <referenceBlock name="home-shipping-info">
+                <block class="Magento\Cms\Block\Block" name="shipping-info" as="shippingInfo">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">cen-default-fr-shipping-info</argument>
+                    </arguments>
+                </block>
+            </referenceBlock>
+
+            <container name="home.wrapper" as="homeWrapper" label="Home Wrapper" htmlTag="div" htmlClass="home-wrapper small-list">
+
+    			<block class="Magento\Framework\View\Element\Template" name="home-featured" template="Magento_Theme::html/custom/home/featured.phtml">
+                    <block class="Magento\Cms\Block\Block" name="featured" as="featuredLeft">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-featured-left</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="featured.right" as="featuredRight">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-featured-right</argument>
+                        </arguments>
+                    </block>
+                </block>
+
+    			
+                <block class="Magento\Framework\View\Element\Template" name="home-reinsurance" template="Magento_Theme::html/custom/home/reinsurance.phtml">
+                     <block class="Magento\Cms\Block\Block" name="reinsurance-left" as="reinsuranceLeft">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-reinsurance-left</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="reinsurance-right" as="reinsuranceRigt">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-reinsurance-right</argument>
+                        </arguments>
+                    </block>
+                </block>
+
+
+    			<block class="Magento\Framework\View\Element\Template" name="home-promotions" template="Magento_Theme::html/custom/home/promotions.phtml">
+
+    				<block class="Magento\Cms\Block\Block" name="promo" as="promo">
+                        <referenceBlock name="category.product.type.details.renderers.configurable" remove="true"/>
+    					<arguments>
+        					<argument name="block_id" xsi:type="string">cen-default-fr-promo</argument>
+   						</arguments>
+					</block>
+					<!-- <block class="Magento\Framework\View\Element\Template" name="home-promo-item" as="promo-item" template="Magento_Theme::html/custom/home/promo-item.phtml" /> -->
+    			</block>
+
+                <block class="Magento\Framework\View\Element\Template" name="home-contact-us" template="Magento_Theme::html/custom/home/contact-us.phtml">
+                    <block class="Magento\Cms\Block\Block" name="contact-us" as="contactUs">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-contact-us</argument>
+                        </arguments>
+                    </block>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="home-grid-categories" template="Magento_Theme::html/custom/home/grid-categories.phtml">
+
+                   <block class="Magento\Cms\Block\Block" name="home-grid-categories-list-title" as="categoryTitle">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-title</argument>
+                        </arguments>
+                    </block>
+
+                   <block class="Magento\Cms\Block\Block" name="home-grid-categories-list-description" as="categoryDescription">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-1-description</argument>
+                        </arguments>
+                    </block>
+
+                     <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-1" as="categoryItem1">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-1</argument>
+                        </arguments>
+                    </block>
+
+                     <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-2" as="categoryItem2">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-2</argument>
+                        </arguments>
+                    </block>
+
+                    <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-3" as="categoryItem3">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-3</argument>
+                        </arguments>
+                    </block>
+
+                    <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-4" as="categoryItem4">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-4</argument>
+                        </arguments>
+                    </block>
+
+                    <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-5" as="categoryItem5">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-5</argument>
+                        </arguments>
+                    </block>
+
+                    <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-6" as="categoryItem6">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-6</argument>
+                        </arguments>
+                    </block>
+
+
+                </block>
+
+                <block class="Magento\Framework\View\Element\Template" name="home-featured-category" template="Magento_Theme::html/custom/home/featured-category.phtml">
+                    <block class="Magento\Cms\Block\Block" name="home-featured-category-list" as="featured-category-list">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-featured-category-list</argument>
+                        </arguments>
+                    </block>
+                </block>
+                
+                <block class="Boeki\Custom\Block\CategoriesList" name="home-brands-list" template="Boeki_Custom::categories-image-slider.phtml">
+                    <arguments>
+                        <argument name="category_id" xsi:type="string">3</argument>
+                        <argument name="limit" xsi:type="string">12</argument>
+                        <argument name="category_title" xsi:type="string">Our brands</argument>
+                    </arguments>
+                </block>
+
+				<block class="Magento\Framework\View\Element\Template" name="home-about-us" template="Magento_Theme::html/custom/home/about-us.phtml">
+                    <block class="Magento\Cms\Block\Block" name="about-us" as="aboutUs">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-about-us</argument>
+                        </arguments>
+                    </block>
+                </block>
+      
+				<block class="Magento\Framework\View\Element\Template" name="home-faq" template="Magento_Theme::html/custom/home/faq.phtml">
+                    <block class="Magento\Cms\Block\Block" name="faq" as="faq">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-faq</argument>
+                        </arguments>
+                    </block>
+                </block>
+				
+            </container>
+
+        </referenceContainer>
+
+        <referenceContainer name="content">
+        </referenceContainer>
+	 
+    </body>
+</page>

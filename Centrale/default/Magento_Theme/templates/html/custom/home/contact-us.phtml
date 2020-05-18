@@ -1,0 +1,12 @@
+<div class="contact-us">
+    <div class="inner">
+    	<div class="content">
+    		<?php $cmsBlock = $this->getChildHtml('contactUs'); if($cmsBlock) : ?>
+			<?php echo $cmsBlock  ?>
+			<?php else : ?>
+            <h2><?= __('Pas encore client ?<br>Créez votre espace en quelques clics') ?></h2>
+            <a href="<?php echo $block->getUrl() ?>contact" class="white link link-button button"><?= __('Contact Us') ?></a>
+        	<?php endif ?>
+    	</div>
+    </div>
+</div>
