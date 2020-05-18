@@ -13,7 +13,7 @@
 
         <referenceBlock name="logo">
             <arguments>
-                <argument name="logo_file" xsi:type="string">images/pacha/logo-2.png</argument>
+                <argument name="logo_file" xsi:type="string">images/logo-foodcenter.png</argument>
                 <argument name="logo_img_width" xsi:type="number">114</argument>
                 <argument name="logo_img_height" xsi:type="number">61</argument>
             </arguments>
@@ -210,7 +210,7 @@
 
             <block class="Magento\Framework\View\Element\Template" name="footer-logo" template="Magento_Theme::html/custom/footer/logo.phtml">
                 <arguments>
-                    <argument name="logo_src" xsi:type="string">images/pacha/footer/logo-2.png</argument>
+                    <argument name="logo_src" xsi:type="string">images/logo-foodcenter.png</argument>
                 </arguments>
             </block>
 
