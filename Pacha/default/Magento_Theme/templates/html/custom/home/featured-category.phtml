@@ -2,9 +2,13 @@
     <div class="featured-category featured-image main responsive">
         <div class="inner vertical-align">
             <div class="content">
+                <?php $cmsBlock = $this->getChildHtml('featuredCategory'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock  ?>
+                <?php else : ?>
                 <h2 class="featured-title">Nos produits tendance New York</h2>
                 <a href="#" class="link link-button button">Voir tous nos produits</a>
                 <img alt="NOS PRODUITS TENDANCE NEW YORK" src="<?php echo $this->getViewFileUrl("images/jakub-kapusnak-296880-unsplash.jpg") ?>">
+                <?php endif ?>
             </div>
         </div>	
     </div>

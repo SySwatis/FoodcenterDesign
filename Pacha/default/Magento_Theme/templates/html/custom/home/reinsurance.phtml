@@ -3,26 +3,42 @@
       <div class="reinsurance-list">
         <div class="item service">
             <div class="content">
-              <h4 class="reinsurance-title icon icon-support">À votre service</h4>
-              <p>Lorem ipsum dolor sit amet adicing elit maecenas sa faubus mollis interdum.</p>
+                <?php $cmsBlock = $this->getChildHtml('reinsurance1'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock  ?>
+                <?php else : ?>
+                <h4 class="reinsurance-title icon icon-support">À votre service</h4>
+                <p>Lorem ipsum dolor sit amet adicing elit maecenas sa faubus mollis interdum.</p>
+                <?php endif ?>
             </div>
         </div>
         <div class="item secure-payment">
             <div class="content">
+                <?php $cmsBlock = $this->getChildHtml('reinsurance2'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock  ?>
+                <?php else : ?>
                 <h4 class="reinsurance-title icon  icon-payment-security">Paiement sécurisé</h4>
                 <p>Lorem ipsum dolor sit amet adicing elit maecenas sa faubus mollis interdum.</p>
+                <?php endif ?>
             </div>
         </div>
         <div class="item shipping">
             <div class="content">
-              <h4 class="reinsurance-title icon icon-valid-delivery">Livraison rapide</h4>
-              <p>Lorem ipsum dolor sit amet adicing elit maecenas sa faubus mollis interdum.</p>
+                <?php $cmsBlock = $this->getChildHtml('reinsurance4'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock  ?>
+                <?php else : ?>
+                <h4 class="reinsurance-title icon icon-valid-delivery">Livraison rapide</h4>
+                <p>Lorem ipsum dolor sit amet adicing elit maecenas sa faubus mollis interdum.</p>
+              <?php endif ?>
             </div>
         </div>
         <div class="item stock-info">
             <div class="content">
-              <h4 class="reinsurance-title icon icon-stock-valid">Stock temps réel</h4>
-              <p>Lorem ipsum dolor sit amet adicing elit maecenas sa faubus mollis interdum.</p>
+                <?php $cmsBlock = $this->getChildHtml('reinsurance5'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock  ?>
+                <?php else : ?>
+                <h4 class="reinsurance-title icon icon-stock-valid">Stock temps réel</h4>
+                <p>Lorem ipsum dolor sit amet adicing elit maecenas sa faubus mollis interdum.</p>
+                <?php endif ?>
             </div>
         </div>
       </div>

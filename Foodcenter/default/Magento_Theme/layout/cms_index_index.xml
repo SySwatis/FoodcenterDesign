@@ -8,6 +8,8 @@
 
     		<container name="home.wrapper" as="homeWrapper" label="Home Wrapper" htmlTag="div" htmlClass="home-wrapper">
 
+                <block class="Magento\Framework\View\Element\Template" name="home-featured" template="Magento_Theme::html/custom/home/featured.phtml" />
+
     			<block class="Magento\Framework\View\Element\Template" name="home-promotions" template="Magento_Theme::html/custom/home/promotions.phtml">
     				<block class="Magento\Cms\Block\Block" name="promo" as="promo">
     					<arguments>
@@ -35,7 +37,7 @@
 
                 <block class="Magento\Framework\View\Element\Template" name="home-faq" template="Magento_Theme::html/custom/home/faq.phtml">
                     <arguments>
-                        <argument name="title" xsi:type="string">Nous répondons à vos questions</argument>
+                        <argument name="title" xsi:type="string" translate="true">Nous répondons à vos questions</argument>
                         <argument name="demo" xsi:type="boolean">true</argument>
                     </arguments>
                     <block class="Magento\Cms\Block\Block" name="faq" as="faq">

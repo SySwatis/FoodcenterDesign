@@ -1,10 +1,10 @@
 <div class="brands">
     <div class="inner brands-list">
         <h2><?= __('Our brands') ?></h2>
-        <?php $cmsBlock = $this->getChildHtml('brandsList'); if($cmsBlock) : ?>
         <div class="content">
-        <?php echo $cmsBlock  ?>
-        <?php else : ?>
+            <?php $cmsBlock = $this->getChildHtml('brandsList'); if($cmsBlock) : ?>
+            <?php echo $cmsBlock  ?>
+            <?php else : ?>
             <ul class="">
                 <li><a href="#"><img src="<?= $this->getViewFileUrl("images/common/brands/logo-vedina.png") ?>"></a></li>
                 <li><a href="#"><img src="<?= $this->getViewFileUrl("images/common/brands/logo-gulnur.png") ?>"></a></li>
@@ -15,7 +15,6 @@
                 <li><a href="#"><img src="<?= $this->getViewFileUrl("images/common/brands/logo-cemet.jpg") ?>"></a></li>
             </ul>
             <button type="button" class="button button-brands action primary" data-href="<?php echo $block->getUrl('brands'); ?>"><?= __('All brands') ?></button>
-        
         <?php endif ?>
         </div>
     </div>

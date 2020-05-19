@@ -136,8 +136,12 @@
                         </arguments>
                     </block>
                 </block>
-      
-				<block class="Magento\Framework\View\Element\Template" name="home-faq" template="Magento_Theme::html/custom/home/faq.phtml">
+
+                <block class="Magento\Framework\View\Element\Template" name="home-faq" template="Magento_Theme::html/custom/home/faq.phtml">
+                    <arguments>
+                        <argument name="title" xsi:type="string" translate="true">We answer your questions</argument>
+                        <argument name="demo" xsi:type="boolean">false</argument>
+                    </arguments>
                     <block class="Magento\Cms\Block\Block" name="faq" as="faq">
                         <arguments>
                             <argument name="block_id" xsi:type="string">cen-default-fr-faq</argument>

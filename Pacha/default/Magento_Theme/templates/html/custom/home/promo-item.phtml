@@ -1,10 +1,15 @@
     <ul class="before-include"><li class="product-item promo-item ">
-       
             <div class="bg-color vertical-align red">
                 <div class="inner">
+                	<div class="content">
+                	<?php $cmsBlock = $this->getChildHtml('promoItem'); if($cmsBlock) : ?>
+                	<?php echo $cmsBlock  ?>
+                	<?php else : ?>
                     <h3>À la une</h3>
                     <p>Retrouvez tous nos produits surgelés sur notre site disponible depuis notre menu</p>
                     <a href="#" class="link link-button button">Découvrir nos produits</a>
+                <?php endif ?>
+                	</div>
                 </div>
             </div>
         
