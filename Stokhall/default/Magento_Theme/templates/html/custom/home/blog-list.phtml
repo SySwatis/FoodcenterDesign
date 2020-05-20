@@ -1,22 +1,20 @@
 <div class="blog-list">
 	<div class="inner clearfix">
 		<div class="col-1">
-			<div class="content">
-				<div class="content">
-	                <?php $cmsBlock = $this->getChildHtml('blogListLeft'); if($cmsBlock) : ?>
-	                <?php echo $cmsBlock  ?>
-	                <?php else : ?>
-					<h2>Les recettes</h2>
-					<p><b>Stokhall vous simplifie la vie, </b><br>Venez découvrir nos recettes, pour en faire les nouveaux plats favoris de votre menu</p>
-					<a href="#" class="link link-button button">Toutes nos recettes</a>
-					<?php endif ?>
+			<div class="content">				
+                <?php $cmsBlock = $this->getChildHtml('blogListLeft'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock  ?>
+                <?php else : ?>
+				<h2>Les recettes</h2>
+				<p><b>Stokhall vous simplifie la vie, </b><br>Venez découvrir nos recettes, pour en faire les nouveaux plats favoris de votre menu</p>
+				<a href="#" class="link link-button button">Toutes nos recettes</a>
+				<?php endif ?>
 			</div>
 		</div>
 		<div class="col-2">
 			<div class="items">
 				<div class="item">
-					<div class="content">
-						<div class="content">
+					<div class="content">						
 	                	<?php $cmsBlock = $this->getChildHtml('blog-item-1'); if($cmsBlock) : ?>
 	                	<?php echo $cmsBlock  ?>
 	                	<?php else : ?>
@@ -27,8 +25,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<div class="content">
-						<div class="content">
+					<div class="content">						
 	                	<?php $cmsBlock = $this->getChildHtml('blog-item-2'); if($cmsBlock) : ?>
 	                	<?php echo $cmsBlock  ?>
 	                	<?php else : ?>
@@ -40,7 +37,6 @@
 				</div>
 				<div class="item">
 					<div class="content">
-						<div class="content">
 	                	<?php $cmsBlock = $this->getChildHtml('blog-item-3'); if($cmsBlock) : ?>
 	                	<?php echo $cmsBlock  ?>
 	                	<?php else : ?>
