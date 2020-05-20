@@ -1,4 +1,16 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+
+    <!-- Boeki Custom -->
+    <referenceBlock name="boeki-custom-preheader">
+        <arguments>
+            <argument name="html_tag_wrapper" xsi:type="string">li</argument>
+        </arguments>
+    </referenceBlock>
+    <move element="boeki-custom-preheader" destination="cms-links-wrapper" after="-"/>
+    <move element="boeki-custom-footer-address"  destination="footer-logo-address-copyright" before="copyright-address"/>
+    <!-- end Boeki Custom -->
+
     <head>
         <link src="https://fonts.googleapis.com/css?family=Work+Sans" src_type="url" rel="stylesheet" type="text/css" />
     </head>
@@ -132,9 +144,6 @@
         <referenceContainer name="footer-container">
             <block class="Magento\Theme\Block\Html\Footer" name="footer" template="html/footer.phtml"/>
         </referenceContainer>
-
-       
-
 
         <referenceBlock name="report.bugs" remove="true"/>
         <!-- <referenceBlock name="footer_links" remove="true"/> -->
@@ -283,15 +292,6 @@
 
         <container name="sidebar.additional" label="Sidebar Additional" htmlTag="div"/>
         <referenceContainer name="sidebar.additional" remove="true"/>
-
-        <!-- Boeki Custom -->
-        <referenceBlock name="boeki-custom-preheader">
-            <arguments>
-                <argument name="html_tag_wrapper" xsi:type="string">li</argument>
-            </arguments>
-        </referenceBlock>
-        <move element="boeki-custom-preheader" destination="cms-links-wrapper" after="-"/>
-        <move element="boeki-custom-footer-address"  destination="footer-logo-address-copyright" before="copyright-address"/>
          
     </body>
 </page>

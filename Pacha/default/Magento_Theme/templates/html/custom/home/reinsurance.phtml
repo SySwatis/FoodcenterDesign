@@ -3,7 +3,7 @@
       <div class="reinsurance-list">
         <div class="item service">
             <div class="content">
-                <?php $cmsBlock = $this->getChildHtml('reinsurance1'); if($cmsBlock) : ?>
+                <?php $cmsBlock = $this->getChildHtml('reinsurance-1'); if($cmsBlock) : ?>
                 <?php echo $cmsBlock  ?>
                 <?php else : ?>
                 <h4 class="reinsurance-title icon icon-support">À votre service</h4>
@@ -13,7 +13,7 @@
         </div>
         <div class="item secure-payment">
             <div class="content">
-                <?php $cmsBlock = $this->getChildHtml('reinsurance2'); if($cmsBlock) : ?>
+                <?php $cmsBlock = $this->getChildHtml('reinsurance-2'); if($cmsBlock) : ?>
                 <?php echo $cmsBlock  ?>
                 <?php else : ?>
                 <h4 class="reinsurance-title icon  icon-payment-security">Paiement sécurisé</h4>
@@ -23,7 +23,7 @@
         </div>
         <div class="item shipping">
             <div class="content">
-                <?php $cmsBlock = $this->getChildHtml('reinsurance4'); if($cmsBlock) : ?>
+                <?php $cmsBlock = $this->getChildHtml('reinsurance-3'); if($cmsBlock) : ?>
                 <?php echo $cmsBlock  ?>
                 <?php else : ?>
                 <h4 class="reinsurance-title icon icon-valid-delivery">Livraison rapide</h4>
@@ -33,7 +33,7 @@
         </div>
         <div class="item stock-info">
             <div class="content">
-                <?php $cmsBlock = $this->getChildHtml('reinsurance5'); if($cmsBlock) : ?>
+                <?php $cmsBlock = $this->getChildHtml('reinsurance-4'); if($cmsBlock) : ?>
                 <?php echo $cmsBlock  ?>
                 <?php else : ?>
                 <h4 class="reinsurance-title icon icon-stock-valid">Stock temps réel</h4>
@@ -44,7 +44,7 @@
       </div>
     </div>
 </div>
-    <script>
+<script>
     // https://kenwheeler.github.io/slick/
     require([
         'jquery',
@@ -52,22 +52,22 @@
     ], function ($) {
         $(document).ready(function () {
             $('.reinsurance-list').slick({
-              dots: true,
-              infinite: false,
-              speed: 300,
-              slidesToShow: 4,
-              slidesToScroll: 4,
-              dots: false,
-              responsive: [
-                {
-                  breakpoint: 768,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: true
-                  }
-                }
-              ]
+                dots: true,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            dots: true
+                        }
+                    }
+                ]
             });
         });
     });

@@ -5,26 +5,42 @@
 
         <div class="item service">
             <div class="content">
-              <h4 class="reinsurance-title icon icon-support">Expert</h4>
-              <p>Notre connaissance du marché nous permet de vous conseiller au mieux.</p>
+                <?php $cmsBlock = $this->getChildHtml('reinsurance-1'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock  ?>
+                <?php else : ?>
+                <h4 class="reinsurance-title icon icon-support">Expert</h4>
+                <p>Notre connaissance du marché nous permet de vous conseiller au mieux.</p>
+                <?php endif ?>
             </div>
         </div>
         <div class="item secure-payment">
             <div class="content">
-              <h4 class="reinsurance-title icon  icon-payment-security">Livraison pro</h4>
-              <p>Grâce à notre service livraison soyez serein, nous vous livrons en temps et en heure<em>*</em>.</p>
+                <?php $cmsBlock = $this->getChildHtml('reinsurance-2'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock  ?>
+                <?php else : ?>
+                <h4 class="reinsurance-title icon  icon-payment-security">Livraison pro</h4>
+                <p>Grâce à notre service livraison soyez serein, nous vous livrons en temps et en heure<em>*</em>.</p>
+                <?php endif ?>
             </div>
         </div>
         <div class="item shipping">
             <div class="content">
-              <h4 class="reinsurance-title icon icon-valid-delivery">Proximité</h4>
-              <p>Nous sommes à votre écoute et créons de la confiance entre vous et nous.</p>
+                <?php $cmsBlock = $this->getChildHtml('reinsurance-3'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock  ?>
+                <?php else : ?>
+                <h4 class="reinsurance-title icon icon-valid-delivery">Proximité</h4>
+                <p>Nous sommes à votre écoute et créons de la confiance entre vous et nous.</p>
+                <?php endif ?>
             </div>
         </div>
         <div class="item stock-info">
             <div class="content">
-              <h4 class="reinsurance-title icon icon-stock-valid">Service drive</h4>
-              <p>Stokhall vous fait gagner du temps grâce à son service Drive.</p>
+                <?php $cmsBlock = $this->getChildHtml('reinsurance-4'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock  ?>
+                <?php else : ?>
+                <h4 class="reinsurance-title icon icon-stock-valid">Service drive</h4>
+                <p>Stokhall vous fait gagner du temps grâce à son service Drive.</p>
+                <?php endif ?>
             </div>
         </div>
       </div>

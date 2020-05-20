@@ -2,18 +2,26 @@
 	<div class="inner clearfix">
 		<div class="col col-50">
 			<div class="content services-slider">
+				<?php $cmsBlock = $this->getChildHtml('servicesLeft'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock  ?>
+                <?php else : ?>
 				<img src="<?= $this->getViewFileUrl("images/appetizer-chicken-cuisine-1123250.jpg") ?>">
 				<img src="<?= $this->getViewFileUrl("images/shutterstock_326380220.jpg") ?>">
 				<img src="<?= $this->getViewFileUrl("images/shutterstock_572447653.jpg") ?>">
+				<?php endif ?>
 		</div>
 		</div>
 		<div class="col col-50 vertical-align">
 			<div class="content">
+				<?php $cmsBlock = $this->getChildHtml('servicesRight'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock  ?>
+                <?php else : ?>
 				<h2>Des produits qui correspondent à vos besoins</h2>
 				<p><b>Nous nous efforçons de répondre au mieux à votre besoin.</b><br>Pour qu’en une seule commande vous trouviez tous les produits nécessaires au bon fonctionnement de votre activité. 
 				Des prix attractifs qui sauront vous satisfaire. 
 				Une fidélité récompensée en fonction de la récurrence de vos achats</p>
 				<a href="/services" class="services-link">Découvrez nos services</a>
+				<?php endif ?>
 			</div>
 		</div>
 	</div>

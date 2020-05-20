@@ -1,53 +1,69 @@
 <div class="featured-main">
-		<div class=" clearfix">
-			
-				<div class="col">
-					<div class="content">
-						<h2>L'enseigne qui vous accompagne au quotidien</h2>
-						<p>Venez découvir nos produits issus de cuisine<br>au 4 coins du monde</p>
-					</div>
-					<a href="#" class="link link-button button">Commencer mon drive</a>
-					<span class="slick-slider"><span class="pagination"><span class="current-slide">01</span>/<span class="featured-main-list-count count">01</span></span></span>
-					<p class="current-slide-title"></p>
-				</div>
-	            <div class="col featured-main-list">
-	            
-		            	<div class="item">
-		            		<div class="content">
-			            		<a href="#"><img alt="Pomme de terre et cie" src="<?= $this->getViewFileUrl("images/shutterstock_195499868.jpg") ?>"></a>
-			            		<h3>Fondantes et dorées</h3>
-			            		<p>Mini rosti, croquettes de fromage, délice de pomme de terre …</p>
-		            		</div>
-		            	</div>
-		            	<div class="item">
-		            		<div class="content">
-			            		<a href="#"><img alt="Pomme de terre au four" src="<?= $this->getViewFileUrl("images/appetizer-bowl-delicious-1640772.jpg") ?>"></a>
-			            		<h3>Nos frites croustillantes</h3>
-			            		<p>Frites rustiques, longues, potatoes, super crunch …</p>
-		            		</div>
-		            	</div>
-		            	<div class="item">
-		            		<div class="content">
-			            		<a href="#"><img alt="Pomme de terre et cie" src="<?= $this->getViewFileUrl("images/shutterstock_195499868.jpg") ?>"></a>
-			            		<h3>Fondantes et dorées</h3>
-			            		<p>Mini rosti, croquettes de fromage, délice de pomme de terre …</p>
-		            		</div>
-		            	</div>
-		            	<div class="item">
-		            		<div class="content">
-			            		<a href="#"><img alt="Pomme de terre et cie" src="<?= $this->getViewFileUrl("images/appetizer-bowl-delicious-1640772.jpg") ?>"></a>
-			            		<h3>Nos frites croustillantes</h3>
-			            		<p>Frites rustiques, longues, potatoes, super crunch …</p>
-		            		</div>
-		            	</div>
-	            	</div>
-	           
+	<div class=" clearfix">
+		<div class="col">
+			<div class="content">
+                <?php $cmsBlock = $this->getChildHtml('featuredLeft'); if($cmsBlock) : ?>
+                <?php echo $cmsBlock  ?>
+                <?php else : ?>
+				<h2>L'enseigne qui vous accompagne au quotidien</h2>
+				<p>Venez découvir nos produits issus de cuisine<br>au 4 coins du monde</p>
+                <?php endif ?>
+			</div>
+			<a href="#" class="link link-button button">Commencer mon drive</a>
+			<span class="slick-slider"><span class="pagination"><span class="current-slide">01</span>/<span class="featured-main-list-count count">01</span></span></span>
+			<p class="current-slide-title"></p>
+		</div>
+        <div class="col featured-main-list">
+            	<div class="item">
+            		<div class="content">
+                        <?php $cmsBlock = $this->getChildHtml('featuredLeft'); if($cmsBlock) : ?>
+                        <?php echo $cmsBlock  ?>
+                        <?php else : ?>
+	            		<a href="#"><img alt="Pomme de terre et cie" src="<?= $this->getViewFileUrl("images/shutterstock_195499868.jpg") ?>"></a>
+	            		<h3>Fondantes et dorées</h3>
+	            		<p>Mini rosti, croquettes de fromage, délice de pomme de terre …</p>
+                        <?php endif ?>
+            		</div>
+            	</div>
+            	<div class="item">
+            		<div class="content">
+                        <?php $cmsBlock = $this->getChildHtml('featured-item-1'); if($cmsBlock) : ?>
+                        <?php echo $cmsBlock  ?>
+                        <?php else : ?>
+	            		<a href="#"><img alt="Pomme de terre au four" src="<?= $this->getViewFileUrl("images/appetizer-bowl-delicious-1640772.jpg") ?>"></a>
+	            		<h3>Nos frites croustillantes</h3>
+	            		<p>Frites rustiques, longues, potatoes, super crunch …</p>
+                        <?php endif ?>
+            		</div>
+            	</div>
+            	<div class="item">
+            		<div class="content">
+                        <?php $cmsBlock = $this->getChildHtml('featured-item-2'); if($cmsBlock) : ?>
+                        <?php echo $cmsBlock  ?>
+                        <?php else : ?>
+	            		<a href="#"><img alt="Pomme de terre et cie" src="<?= $this->getViewFileUrl("images/shutterstock_195499868.jpg") ?>"></a>
+	            		<h3>Fondantes et dorées</h3>
+	            		<p>Mini rosti, croquettes de fromage, délice de pomme de terre …</p>
+                        <?php endif ?>
+            		</div>
+            	</div>
+            	<div class="item">
+            		<div class="content">
+                        <?php $cmsBlock = $this->getChildHtml('featured-item-3'); if($cmsBlock) : ?>
+                        <?php echo $cmsBlock  ?>
+                        <?php else : ?>
+	            		<a href="#"><img alt="Pomme de terre et cie" src="<?= $this->getViewFileUrl("images/appetizer-bowl-delicious-1640772.jpg") ?>"></a>
+	            		<h3>Nos frites croustillantes</h3>
+	            		<p>Frites rustiques, longues, potatoes, super crunch …</p>
+                        <?php endif ?>
+            		</div>
+            	</div>
+        	</div>
 			
     	</div>
     	
-    </div>
-    
-    <script>
+</div>
+<script>
     require([
         'jquery',
         'slick'
@@ -86,4 +102,4 @@
 			});
         });
     });
-	</script>
+</script>

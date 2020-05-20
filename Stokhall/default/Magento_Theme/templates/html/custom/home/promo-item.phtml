@@ -3,8 +3,12 @@
             <div class="bg-color vertical-align red promo-item">
                 <div class="inner">
                 	<div class="content">
-	                    <h3>Commandez, payez et gagnez du temps pour faire vos courses</h3>
+                		<?php $cmsBlock = $this->getChildHtml('promoItem'); if($cmsBlock) : ?>
+                		<?php echo $cmsBlock  ?>
+                		<?php else : ?>
+	                    <h3><?= __('Commandez, payez et gagnez du temps pour faire vos courses') ?></h3>
 	                    <a href="#" class="link link-button button"><?= __('Voir les conditions') ?></a>
+	                	<?php endif ?>
                 	</div>
                 </div>
             </div>

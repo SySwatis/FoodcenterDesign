@@ -1,32 +1,49 @@
 <?xml version="1.0"?>
  
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <!-- Boeki_Custom -->
+    <referenceBlock name="boeki-categories-image-slider">
+         <arguments>
+            <argument name="category_id" xsi:type="string">3</argument>
+            <argument name="limit" xsi:type="string">12</argument>
+            <argument name="category_title" xsi:type="string">Our brands</argument>
+        </arguments>
+    </referenceBlock>
+    <move element="boeki-categories-image-slider" destination="home.wrapper" before="home-about-us"/>
+    <!-- end Boeki Custom -->
+
     <body>
       <referenceContainer name="page.top">
 
             <block class="Magento\Framework\View\Element\Template" name="home-shipping-info" template="Magento_Theme::html/custom/shipping-info.phtml" before="-">
                 <block class="Magento\Cms\Block\Block" name="shipping-info" as="shippingInfo">
                     <arguments>
-                        <argument name="block_id" xsi:type="string">sto-default-shipping-info</argument>
+                        <argument name="block_id" xsi:type="string">sto-default-fr-shipping-info</argument>
                     </arguments>
                 </block>
             </block>
 
             <container name="home.wrapper" as="homeWrapper" label="Home Wrapper" htmlTag="div" htmlClass="home-wrapper small-list">
 
-    			<block class="Magento\Framework\View\Element\Template" name="home-featured" template="Magento_Theme::html/custom/home/featured.phtml" />
+    			<block class="Magento\Framework\View\Element\Template" name="home-featured" template="Magento_Theme::html/custom/home/featured.phtml">
+                    <block class="Magento\Cms\Block\Block" name="featured" as="featured">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-featured</argument>
+                        </arguments>
+                    </block>
+                </block>
 
     			
                 <block class="Magento\Framework\View\Element\Template" name="home-reinsurance" template="Magento_Theme::html/custom/home/reinsurance.phtml" />
 
 
- <block class="Magento\Framework\View\Element\Template" name="home-featured-category" template="Magento_Theme::html/custom/home/featured-category.phtml">
+                <block class="Magento\Framework\View\Element\Template" name="home-featured-category" template="Magento_Theme::html/custom/home/featured-category.phtml">
                     <block class="Magento\Cms\Block\Block" name="home-featured-category-list" as="featured-category-list">
                         <arguments>
-                            <argument name="block_id" xsi:type="string">cen-default-fr-featured-category-list</argument>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-featured-category-list</argument>
                         </arguments>
                     </block>
-
                 </block>
 
                  <block class="Magento\Framework\View\Element\Template" name="home-promo-item" as="promo-item" template="Magento_Theme::html/custom/home/promo-item.phtml" />
@@ -36,12 +53,20 @@
                 <block class="Magento\Framework\View\Element\Template" name="home-contact-us" template="Magento_Theme::html/custom/home/contact-us.phtml" />
 
                 <block class="Magento\Framework\View\Element\Template" name="blog-list" template="Magento_Theme::html/custom/home/blog-list.phtml" />
-    
-				<block class="Magento\Framework\View\Element\Template" name="brands-list" template="Magento_Theme::html/custom/home/brands-list.phtml" />
 
 				<block class="Magento\Framework\View\Element\Template" name="home-about-us" template="Magento_Theme::html/custom/home/about-us.phtml" />
       
-				<block class="Magento\Framework\View\Element\Template" name="faq" template="Magento_Theme::html/custom/home/faq.phtml" />
+				<block class="Magento\Framework\View\Element\Template" name="home-faq" template="Magento_Theme::html/custom/home/faq.phtml">
+                    <arguments>
+                        <argument name="title" xsi:type="string" translate="true">We answer your questions</argument>
+                        <argument name="demo" xsi:type="boolean">true</argument>
+                    </arguments>
+                    <block class="Magento\Cms\Block\Block" name="faq" as="faq">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-faq</argument>
+                        </arguments>
+                    </block>
+                </block>
 		
 				
             </container>

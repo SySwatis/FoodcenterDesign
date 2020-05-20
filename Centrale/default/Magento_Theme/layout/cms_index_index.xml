@@ -1,6 +1,18 @@
 <?xml version="1.0"?>
  
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <!-- Boeki_Custom -->
+    <referenceBlock name="boeki-categories-image-slider">
+         <arguments>
+            <argument name="category_id" xsi:type="string">3</argument>
+            <argument name="limit" xsi:type="string">12</argument>
+            <argument name="category_title" xsi:type="string">Our brands</argument>
+        </arguments>
+    </referenceBlock>
+    <move element="boeki-categories-image-slider" destination="home.wrapper" after="home-about-us"/>
+    <!-- end Boeki Custom -->
+
     <body>
         <referenceContainer name="page.top">
             
@@ -27,7 +39,6 @@
                     </block>
                 </block>
 
-    			
                 <block class="Magento\Framework\View\Element\Template" name="home-reinsurance" template="Magento_Theme::html/custom/home/reinsurance.phtml">
                      <block class="Magento\Cms\Block\Block" name="reinsurance-left" as="reinsuranceLeft">
                         <arguments>
@@ -41,7 +52,6 @@
                     </block>
                 </block>
 
-
     			<block class="Magento\Framework\View\Element\Template" name="home-promotions" template="Magento_Theme::html/custom/home/promotions.phtml">
 
     				<block class="Magento\Cms\Block\Block" name="promo" as="promo">
@@ -50,7 +60,6 @@
         					<argument name="block_id" xsi:type="string">cen-default-fr-promo</argument>
    						</arguments>
 					</block>
-					<!-- <block class="Magento\Framework\View\Element\Template" name="home-promo-item" as="promo-item" template="Magento_Theme::html/custom/home/promo-item.phtml" /> -->
     			</block>
 
                 <block class="Magento\Framework\View\Element\Template" name="home-contact-us" template="Magento_Theme::html/custom/home/contact-us.phtml">
@@ -60,57 +69,48 @@
                         </arguments>
                     </block>
                 </block>
-                <block class="Magento\Framework\View\Element\Template" name="home-grid-categories" template="Magento_Theme::html/custom/home/grid-categories.phtml">
 
+                <block class="Magento\Framework\View\Element\Template" name="home-grid-categories" template="Magento_Theme::html/custom/home/grid-categories.phtml">
                    <block class="Magento\Cms\Block\Block" name="home-grid-categories-list-title" as="categoryTitle">
                         <arguments>
                             <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-title</argument>
                         </arguments>
                     </block>
-
                    <block class="Magento\Cms\Block\Block" name="home-grid-categories-list-description" as="categoryDescription">
                         <arguments>
                             <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-1-description</argument>
                         </arguments>
                     </block>
-
-                     <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-1" as="categoryItem1">
+                    <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-1" as="categoryItem1">
                         <arguments>
                             <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-1</argument>
                         </arguments>
                     </block>
-
-                     <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-2" as="categoryItem2">
+                    <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-2" as="categoryItem2">
                         <arguments>
                             <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-2</argument>
                         </arguments>
                     </block>
-
                     <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-3" as="categoryItem3">
                         <arguments>
                             <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-3</argument>
                         </arguments>
                     </block>
-
                     <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-4" as="categoryItem4">
                         <arguments>
                             <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-4</argument>
                         </arguments>
                     </block>
-
                     <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-5" as="categoryItem5">
                         <arguments>
                             <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-5</argument>
                         </arguments>
                     </block>
-
                     <block class="Magento\Cms\Block\Block" name="home-grid-categories-item-6" as="categoryItem6">
                         <arguments>
                             <argument name="block_id" xsi:type="string">cen-default-fr-grid-category-item-6</argument>
                         </arguments>
                     </block>
-
-
                 </block>
 
                 <block class="Magento\Framework\View\Element\Template" name="home-featured-category" template="Magento_Theme::html/custom/home/featured-category.phtml">
@@ -119,14 +119,6 @@
                             <argument name="block_id" xsi:type="string">cen-default-fr-featured-category-list</argument>
                         </arguments>
                     </block>
-                </block>
-                
-                <block class="Boeki\Custom\Block\CategoriesList" name="home-brands-list" template="Boeki_Custom::categories-image-slider.phtml">
-                    <arguments>
-                        <argument name="category_id" xsi:type="string">3</argument>
-                        <argument name="limit" xsi:type="string">12</argument>
-                        <argument name="category_title" xsi:type="string">Our brands</argument>
-                    </arguments>
                 </block>
 
 				<block class="Magento\Framework\View\Element\Template" name="home-about-us" template="Magento_Theme::html/custom/home/about-us.phtml">
@@ -140,7 +132,6 @@
                 <block class="Magento\Framework\View\Element\Template" name="home-faq" template="Magento_Theme::html/custom/home/faq.phtml">
                     <arguments>
                         <argument name="title" xsi:type="string" translate="true">We answer your questions</argument>
-                        <argument name="demo" xsi:type="boolean">false</argument>
                     </arguments>
                     <block class="Magento\Cms\Block\Block" name="faq" as="faq">
                         <arguments>
@@ -154,7 +145,10 @@
         </referenceContainer>
 
         <referenceContainer name="content">
+
         </referenceContainer>
+
+
 	 
     </body>
 </page>

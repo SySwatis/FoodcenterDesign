@@ -1,63 +1,149 @@
 <?xml version="1.0"?>
  
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <!-- Boeki_Custom -->
+    <referenceBlock name="boeki-categories-image-slider">
+         <arguments>
+            <argument name="category_id" xsi:type="string">3</argument>
+            <argument name="limit" xsi:type="string">12</argument>
+            <argument name="category_title" xsi:type="string">Our brands</argument>
+        </arguments>
+    </referenceBlock>
+    <move element="boeki-categories-image-slider" destination="home.wrapper" before="home-about-us"/>
+    <!-- end Boeki Custom -->
+
     <body>
       <referenceContainer name="page.top">
            
             <block class="Magento\Framework\View\Element\Template" name="home-shipping-info" template="Magento_Theme::html/custom/shipping-info.phtml" before="-">
                 <block class="Magento\Cms\Block\Block" name="shipping-info" as="shippingInfo">
                     <arguments>
-                        <argument name="block_id" xsi:type="string">pac-default-shipping-info</argument>
+                        <argument name="block_id" xsi:type="string">pac-default-fr-shipping-info</argument>
                     </arguments>
                 </block>
             </block>
 
     		<container name="home.wrapper" as="homeWrapper" label="Home Wrapper" htmlTag="div" htmlClass="home-wrapper">
 
-    			<block class="Magento\Framework\View\Element\Template" name="home-featured" template="Magento_Theme::html/custom/home/featured.phtml" />
+    			<block class="Magento\Framework\View\Element\Template" name="home-featured" template="Magento_Theme::html/custom/home/featured.phtml">
+                    <block class="Magento\Cms\Block\Block" name="featured" as="featured">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-featured</argument>
+                        </arguments>
+                    </block>
+                </block>
 
-    			<block class="Magento\Framework\View\Element\Template" name="home-process" template="Magento_Theme::html/custom/home/process.phtml" />
-
-
+    			<block class="Magento\Framework\View\Element\Template" name="home-process" template="Magento_Theme::html/custom/home/process.phtml">
+                    <block class="Magento\Cms\Block\Block" name="featured" as="featured">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-proccess-1</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="featured" as="featured">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-proccess-2</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="featured" as="featured">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-proccess-3</argument>
+                        </arguments>
+                    </block>
+                </block>
 
     			<block class="Magento\Framework\View\Element\Template" name="home-promotions" template="Magento_Theme::html/custom/home/promotions.phtml">
     				<block class="Magento\Cms\Block\Block" name="promo" as="promo">
     					<arguments>
-        					<argument name="block_id" xsi:type="string">promo</argument>
+        					<argument name="block_id" xsi:type="string">pac-default-fr-promo</argument>
    						</arguments>
 					</block>
-					<block class="Magento\Framework\View\Element\Template" name="home-promo-item" as="promo-item" template="Magento_Theme::html/custom/home/promo-item.phtml" />
+					<block class="Magento\Framework\View\Element\Template" name="home-promo-item" as="promo-item" template="Magento_Theme::html/custom/home/promo-item.phtml">
+                        <block class="Magento\Cms\Block\Block" name="promo-item" as="promoItem">
+                            <arguments>
+                                <argument name="block_id" xsi:type="string">pac-default-fr-promo-item</argument>
+                            </arguments>
+                        </block>
+                    </block>
     			</block>
 
-    			<block class="Magento\Framework\View\Element\Template" name="home-reinsurance" template="Magento_Theme::html/custom/home/reinsurance.phtml" />
+    			<block class="Magento\Framework\View\Element\Template" name="home-reinsurance" template="Magento_Theme::html/custom/home/reinsurance.phtml">
+                    <block class="Magento\Cms\Block\Block" name="reinsurance-1" as="reinsurance-1">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-reinsurance-1</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="reinsurance-2" as="reinsurance-2">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-reinsurance-2</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="reinsurance-3" as="reinsurance-3">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-reinsurance-3</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="reinsurance-4" as="reinsurance-4">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-reinsurance-4</argument>
+                        </arguments>
+                    </block>
+
+                </block>
 
     			<block class="Magento\Framework\View\Element\Template" name="home-featured-category" template="Magento_Theme::html/custom/home/featured-category.phtml">
-                    <block class="Magento\Cms\Block\Block" name="featured-category-list" as="featured-category-list">
-                        
+                    <block class="Magento\Cms\Block\Block" name="featured-category" as="featuredCategory">
                         <arguments>
-                            <argument name="block_id" xsi:type="string">featured-category-list</argument>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-featured-category</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="featured-category-list" as="featured-category-list">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-featured-category-list</argument>
                         </arguments>
                     </block>
                 </block>
 				
-				<block class="Magento\Framework\View\Element\Template" name="home-grid-categories" template="Magento_Theme::html/custom/home/grid-categories.phtml" />
+				<block class="Magento\Framework\View\Element\Template" name="home-grid-categories" template="Magento_Theme::html/custom/home/grid-categories.phtml">
+                    <block class="Magento\Cms\Block\Block" name="grid-categories-1" as="grid-categories-1">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-grid-categories-1</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="grid-categories-2" as="grid-categories-2">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-grid-categories-2</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="grid-categories-3" as="grid-categories-3">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-grid-categories-3</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="grid-categories-4" as="grid-categories-4">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-grid-categories-4</argument>
+                        </arguments>
+                    </block>
+                </block>
 
-				<block class="Magento\Framework\View\Element\Template" name="home-brands-list" template="Magento_Theme::html/custom/home/brands-list.phtml" />
-
-				<block class="Magento\Framework\View\Element\Template" name="home-about-us" template="Magento_Theme::html/custom/home/about-us.phtml" />
+				<block class="Magento\Framework\View\Element\Template" name="home-about-us" template="Magento_Theme::html/custom/home/about-us.phtml">
+                     <block class="Magento\Cms\Block\Block" name="about-us" as="aboutUs">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">pac-default-fr-about-us</argument>
+                        </arguments>
+                    </block>
+                </block>
       
 				<block class="Magento\Framework\View\Element\Template" name="home-contact-us" template="Magento_Theme::html/custom/home/contact-us.phtml">
 					<block class="Magento\Contact\Block\ContactForm" as="homeContactForm" name="homeContactForm" template="Magento_Contact::form.phtml" />
 				</block>
-		
-				
 
 		    </container>	
 
     </referenceContainer>
 
     <referenceContainer name="content">
-		
     </referenceContainer>
 	 
 </body>

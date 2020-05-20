@@ -2,32 +2,52 @@
 	<div class="inner clearfix">
 		<div class="col-1">
 			<div class="content">
-				<h2>Les recettes</h2>
-				<p><b>Stokhall vous simplifie la vie, </b><br>Venez découvrir nos recettes, pour en faire les nouveaux plats favoris de votre menu</p>
-				<a href="#" class="link link-button button">Toutes nos recettes</a>
+				<div class="content">
+	                <?php $cmsBlock = $this->getChildHtml('blogListLeft'); if($cmsBlock) : ?>
+	                <?php echo $cmsBlock  ?>
+	                <?php else : ?>
+					<h2>Les recettes</h2>
+					<p><b>Stokhall vous simplifie la vie, </b><br>Venez découvrir nos recettes, pour en faire les nouveaux plats favoris de votre menu</p>
+					<a href="#" class="link link-button button">Toutes nos recettes</a>
+					<?php endif ?>
 			</div>
 		</div>
 		<div class="col-2">
 			<div class="items">
 				<div class="item">
 					<div class="content">
+						<div class="content">
+	                	<?php $cmsBlock = $this->getChildHtml('blog-item-1'); if($cmsBlock) : ?>
+	                	<?php echo $cmsBlock  ?>
+	                	<?php else : ?>
 						<img src="<?= $this->getViewFileUrl("images/burger-cheeseburger-chicken-1484669.jpg") ?>">
 						<h3>L’unique chicken burger</h3>
 						<a class="link-product link-widget">Voir le produit</a>
+						<?php endif ?>
 					</div>
 				</div>
 				<div class="item">
 					<div class="content">
+						<div class="content">
+	                	<?php $cmsBlock = $this->getChildHtml('blog-item-2'); if($cmsBlock) : ?>
+	                	<?php echo $cmsBlock  ?>
+	                	<?php else : ?>
 						<img class="full-height" src="<?= $this->getViewFileUrl("images/shutterstock_614616038-thee ramadan.jpg") ?>">
 						<h3>Les merveilleuses pitas</h3>
 						<a class="link-product link-widget">Voir le produit</a>
+						<?php endif ?>
 					</div>
 				</div>
 				<div class="item">
 					<div class="content">
+						<div class="content">
+	                	<?php $cmsBlock = $this->getChildHtml('blog-item-3'); if($cmsBlock) : ?>
+	                	<?php echo $cmsBlock  ?>
+	                	<?php else : ?>
 						<img src="<?= $this->getViewFileUrl("images/anise-aroma-art-277253.jpg") ?>">
 						<h3>Haute Savoie</h3>
 						<a class="ink-product link-widget">Voir le produit</a>
+						<?php endif ?>
 					</div>
 				</div>
 			</div>
