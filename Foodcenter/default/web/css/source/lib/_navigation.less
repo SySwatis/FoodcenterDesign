@@ -149,16 +149,17 @@
             &.featured-menu {              
                 text-align: center;
                 border: 0;
+                > span[class*="widget"] {
+                    display: block;
+                }
+                > img {
+                    max-height: inherit !important;
+                    height: auto;
+                }
                 a {
                     padding: 0;
                     margin: 0;
-                    img {
-                        max-width: 100%;
-                        min-width: 100%;
-                            
-                    }
                 }
-              //  .lib-widget-link();
             }
         }
 
@@ -319,8 +320,6 @@
             margin: 0 auto;
         }
 
-        
-
         > ul {
             display: flex;
             flex-wrap: wrap;
@@ -337,11 +336,16 @@
                         position: relative;
                         max-width: 33%;
                         margin: 0 auto;
-
+                        > span[class*="widget"] {
+                            display: block;
+                        }
                         p {
                             margin: 0;
                         }
-                       // .lib-widget-link();
+                        > img {
+                            max-height: inherit !important;
+                            height: auto;
+                        }
                     }
                 }
             } 

@@ -1,3 +1,4 @@
+<?php $title = $block->getTitle() ? $block->getTitle() : __("Une question ? Besoin d'aide ?") ?>
 <div class="contact-us">
         <div class="bg-color red vertical-align">
             <div class="inner">
@@ -5,7 +6,7 @@
         			<?php $cmsBlock = $this->getChildHtml('contactUs'); if($cmsBlock) : ?>
             		<?php echo $cmsBlock  ?>
             		<?php else : ?>
-                	<h3><?= __("Une question ? Besoin d'aide ?") ?></h3>
+                	<h3><?= $title ?></h3>
                 	<a href="/contact" class="link link-button button"><?= __('Contact Us') ?> ?</a>
             		<?php endif ?>
             	</div>

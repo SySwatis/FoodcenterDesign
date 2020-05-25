@@ -1,8 +1,8 @@
- <div class="reinsurance background-image" style="background-image: url(<?php echo $this->getViewFileUrl("images/cuisine-delicious-dinner-958545.jpg") ?>);">
-   <h2>Supermarché alimentaire pro et particulier</h2>
+<?php $title = $block->getTitle() ? $block->getTitle() : __('Supermarché alimentaire pro et particulier') ?>
+<div class="reinsurance background-image" style="background-image: url(<?php echo $this->getViewFileUrl("images/cuisine-delicious-dinner-958545.jpg") ?>);">
+    <h2><?= $title ?></h2>
     <div class="inner">
       <div class="reinsurance-list">
-
         <div class="item service">
             <div class="content">
                 <?php $cmsBlock = $this->getChildHtml('reinsurance-1'); if($cmsBlock) : ?>
@@ -46,8 +46,7 @@
       </div>
     </div>
 </div>
-    <script>
-    // https://kenwheeler.github.io/slick/
+<script>
     require([
         'jquery',
         'slick'

@@ -1,5 +1,6 @@
+<?php $title = $block->getTitle() ? $block->getTitle() : __('Featured Category List') ?>
 <div class="featured-category-list">
-        <h2><?= __('Featured Category List') ?></h2>
+        <h2><?= $title ?></h2>
         <div class="inner">
             <?= $block->getChildHtml('featured-category-list') ?>
         </div>

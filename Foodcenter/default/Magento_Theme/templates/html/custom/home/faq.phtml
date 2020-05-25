@@ -1,6 +1,7 @@
+<?php $title = $block->getTitle() ? $block->getTitle() : __('We answer your questions') ?>
 <div class="faq">
 	<div class="inner">
-		<h2><?= __($block->getTitle()) ?></h2>
+		<h2><?= $title ?></h2>
 		<div class="content">
 			 <?php $cmsBlock = $this->getChildHtml('faq'); if($cmsBlock) : ?>
                 <?php echo $cmsBlock ?>

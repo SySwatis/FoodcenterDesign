@@ -33,33 +33,101 @@
                         </arguments>
                     </block>
                 </block>
-
     			
-                <block class="Magento\Framework\View\Element\Template" name="home-reinsurance" template="Magento_Theme::html/custom/home/reinsurance.phtml" />
-
+                <block class="Magento\Framework\View\Element\Template" name="home-reinsurance" template="Magento_Theme::html/custom/home/reinsurance.phtml">
+                    <block class="Magento\Cms\Block\Block" name="reinsurance-1" as="reinsurance-1">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-reinsurance-1</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="reinsurance-2" as="reinsurance-2">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-reinsurance-2</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="reinsurance-3" as="reinsurance-3">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-reinsurance-3</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="reinsurance-4" as="reinsurance-4">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-reinsurance-4</argument>
+                        </arguments>
+                    </block>
+                </block>
 
                 <block class="Magento\Framework\View\Element\Template" name="home-featured-category" template="Magento_Theme::html/custom/home/featured-category.phtml">
-                    <block class="Magento\Cms\Block\Block" name="home-featured-category-list" as="featured-category-list">
+                    <block class="Magento\Cms\Block\Block" name="home-featured-category-list" as="featuredCategoryList">
                         <arguments>
                             <argument name="block_id" xsi:type="string">sto-default-fr-featured-category-list</argument>
                         </arguments>
                     </block>
                 </block>
 
-                 <block class="Magento\Framework\View\Element\Template" name="home-promo-item" as="promo-item" template="Magento_Theme::html/custom/home/promo-item.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="home-promo-item" as="promo-item" template="Magento_Theme::html/custom/home/promo-item.phtml">
+                    <block class="Magento\Cms\Block\Block" name="promo-item" as="promoItem">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-promo-item</argument>
+                        </arguments>
+                    </block>
+                </block>
 
-                <block class="Magento\Framework\View\Element\Template" name="home-services" template="Magento_Theme::html/custom/home/services.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="home-services" template="Magento_Theme::html/custom/home/services.phtml">
+                    <block class="Magento\Cms\Block\Block" name="services-left" as="servicesLeft">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-services-left</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="services-right" as="servicesRight">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-services-right</argument>
+                        </arguments>
+                    </block>
+                </block>
 
-                <block class="Magento\Framework\View\Element\Template" name="home-contact-us" template="Magento_Theme::html/custom/home/contact-us.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="home-contact-us" template="Magento_Theme::html/custom/home/contact-us.phtml">
+                    <block class="Magento\Cms\Block\Block" name="contact-us" as="contactUs">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-contact-us</argument>
+                        </arguments>
+                    </block>
+                </block>
 
-                <block class="Magento\Framework\View\Element\Template" name="blog-list" template="Magento_Theme::html/custom/home/blog-list.phtml" />
+                <block class="Magento\Framework\View\Element\Template" name="blog-list" template="Magento_Theme::html/custom/home/blog-list.phtml">
+                     <block class="Magento\Cms\Block\Block" name="blog-left" as="blogListLeft">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-blog-left</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="blog-item-1" as="blog-item-1">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-blog-item-1</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="blog-item-1" as="blog-item-2">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-blog-item-2</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="blog-item-1" as="blog-item-3">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-blog-item-3</argument>
+                        </arguments>
+                    </block>
+                </block>
 
-				<block class="Magento\Framework\View\Element\Template" name="home-about-us" template="Magento_Theme::html/custom/home/about-us.phtml" />
+				<block class="Magento\Framework\View\Element\Template" name="home-about-us" template="Magento_Theme::html/custom/home/about-us.phtml">
+                    <block class="Magento\Cms\Block\Block" name="about-us" as="aboutUs">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-about-us</argument>
+                        </arguments>
+                    </block>
+                </block>
       
 				<block class="Magento\Framework\View\Element\Template" name="home-faq" template="Magento_Theme::html/custom/home/faq.phtml">
                     <arguments>
                         <argument name="title" xsi:type="string" translate="true">We answer your questions</argument>
-                        <argument name="demo" xsi:type="boolean">true</argument>
                     </arguments>
                     <block class="Magento\Cms\Block\Block" name="faq" as="faq">
                         <arguments>

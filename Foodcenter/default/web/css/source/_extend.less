@@ -152,6 +152,14 @@
         line-height: 1.3;
     }
 
+    // Navigation
+
+    .navigation .boe-menu-icons {
+    	&:before {
+    		text-shadow: 0 0 0 #000;
+    	}
+    }
+
     // Title
 
 	.abs-block-title > strong, .block-title > strong,  strong.title, .cart-summary > .title {
@@ -1152,13 +1160,18 @@
 	}
 
 	.header.links {
-		li.authorization-link.authorization-link__dropdown-widget > .action {
-			text-align: center;
-			padding: 0.8rem 20px;
-			&:before {
-				display: none !important;
+		li.authorization-link.authorization-link__dropdown-widget {
+			.label {
+				margin-bottom: @indent__base;display: inline-block;
 			}
-		} 
+			> .action {
+				text-align: center;
+				padding: 0.8rem 20px;
+				&:before {
+					display: none !important;
+				}
+			} 
+		}
 		.my-account-link a {
 			.lib-icon-font(
 				@_icon-font-content: @icon-account,
@@ -1208,25 +1221,20 @@
 
 				&.hello-store {
 					display: flex;
-					flex-direction: column;	
-			
-					 li{
-					 	&:nth-child(3) {
-					 		margin-top: 20px;
-					 	}
-						&:nth-child(2), &:nth-child(1){
-							 
+					flex-direction: column;
+					li {
+						> .store-hours {
+							padding-left: @indent__base;
+							margin-bottom: @indent__base;
 						}
 						&:nth-child(4) {
-							.lib-vendor-prefix-order(-1);
-							
+							.lib-vendor-prefix-order(-1);	
 						}
 						.switcher-language {
 							.action.toggle:after {
 								display: none;
 							}
 						}
-						
 					}
 				}
 				
@@ -1254,13 +1262,13 @@
 		&-container {
 			.lib-clearfix();
 		}
-		
+		text-align: left;
 		.cms-links-footer {
 			.lib-font-size(16);
 			> p:empty {
 				display: none;
 			}
-			> li, > p,  > .widget {
+			> ul > li, > p, > .widget {
 				margin: 0;
 				a {
 					display: inline-block;

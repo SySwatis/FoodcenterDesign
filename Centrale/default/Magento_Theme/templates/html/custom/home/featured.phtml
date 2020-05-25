@@ -27,14 +27,14 @@
 								<p>Articles de<br>cuisine du monde</p>
 							</li>
 						</ul>
-						<img alt="<?= __('La Centrale') ?>" src="<?php echo $this->getViewFileUrl("images/centrale/IMG_4690.jpg") ?>" />
+						<img alt="<?= __('La Centrale') ?>" src="<?php echo $this->getViewFileUrl("images/IMG_4690.jpg") ?>" />
 						<?php endif ?>
 					</div>	
 				</div>
 				<?php $cmsBlock = $this->getChildHtml('featuredRight'); if($cmsBlock) : ?>
 						<?php echo $cmsBlock  ?>
 						<?php else : ?>
-						<!-- <img alt="<?= __('La Centrale, la livraison') ?>" src="<?php echo $this->getViewFileUrl("images/centrale/centrale-ethnique-featured-right.png") ?>" /> -->
+						<!-- <img alt="<?= __('La Centrale, la livraison') ?>" src="<?php echo $this->getViewFileUrl("images/centrale-ethnique-featured-right.png") ?>" /> -->
 						<video style="top:-25%" playsinline autoplay muted loop id="featuredVideo" data-src-mp4="<?php echo $this->getViewFileUrl("images/video.mp4") ?>">
 							<source id="mp4_src" type="video/mp4">
 						</video>

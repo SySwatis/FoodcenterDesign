@@ -1,6 +1,7 @@
+<?php $title = $block->getTitle() ? $block->getTitle() : __('Our Brands') ?>
 <div class="brands">
     <div class="inner brands-list">
-        <h2><?= __('Our brands') ?></h2>
+        <h2><?= $title ?></h2>
         <div class="content">
             <?php $cmsBlock = $this->getChildHtml('brandsList'); if($cmsBlock) : ?>
             <?php echo $cmsBlock  ?>
