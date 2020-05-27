@@ -1264,7 +1264,7 @@
 		}
 		text-align: left;
 		.cms-links-footer {
-			.lib-font-size(16);
+			.lib-font-size(17);
 			> p:empty {
 				display: none;
 			}
@@ -1429,11 +1429,12 @@
 	.shipping.info {
 		.lib-font-size(20);
 	}
-
-	.nav-sections-item-content > .cms-links {
-		> li > a {
+	.nav-sections-item-content > .cms-links, .header.links, .minicart-wrapper {
+		> li > a, li > .action, .text {
 			font-family: @cms-links-font-family;
 		}
+	}
+	.nav-sections-item-content > .cms-links {
 		.lib-list-reset-styles();
 		display: block !important; // override
 		// margin: 7px 0 7px -131px; // - logo + padding : 126px + 15px 

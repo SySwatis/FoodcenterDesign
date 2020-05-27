@@ -51,7 +51,9 @@
     @_submenu-item__active__border-style: @submenu-item__active__border-style,
     @_submenu-item__active__border-width: @submenu-item__active__border-width,
     @_submenu-item-color-active: @submenu-item__active__color,
-    @_submenu-item-text-decoration-active: @submenu-item__active__text-decoration
+    @_submenu-item-text-decoration-active: @submenu-item__active__text-decoration,
+
+   // @_nav-level-top-font-family-name: @navigation-level-top-font-family-name
 ) {
     .navigation {
         .lib-css(background, @_nav-background-color);
@@ -99,6 +101,7 @@
                 .lib-css(line-height, @_nav-level0-item-line-height);
                 .lib-css(padding, @_nav-level0-item-padding);
                 .lib-css(text-transform, @_nav-level0-text-transform);
+                .lib-css(font-family,@navigation-level-top-font-family-name);
                 word-wrap: break-word;
                 &:hover {
                     .lib-css(color, @navigation-level0-item__hover__color);
@@ -282,7 +285,7 @@
     @_submenu-background-color: @submenu-desktop__background,
     @_submenu-border-width: @submenu-desktop__border-width,
     @_submenu-border-style: @submenu-desktop__border-style,
-    @_submenu-border-color: @submenu-desktop__border-color,
+    @_submenu-border-color: @navigation-level0-item__border,
     @_submenu-box-shadow: @submenu-desktop__box-shadow,
     @_submenu-font-size: @submenu-desktop__font-size,
     @_submenu-font-weight: @submenu-desktop__font-weight,
@@ -329,6 +332,9 @@
                 margin: 0 16px;
                 &.level0 {
                     flex:1 0 25%;
+                    > .level-top {
+                        .lib-css(font-family,@navigation-level-top-font-family-name);
+                    }
                     &.featured-menu {
                         text-align: center;
                         flex-basis: 100%;

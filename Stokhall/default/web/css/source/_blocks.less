@@ -127,7 +127,6 @@
 					line-height: 23px;
 				}
 			}
-
 			&-list {
 				.item {
 					position: relative;
@@ -167,7 +166,6 @@
 			position: relative;
 			z-index: 2;
 		}
-
 		> .inner {
 			margin-bottom: 90px;
 			position: relative;
@@ -228,7 +226,6 @@
                     display: block !important;
                 }
             }
-
 			.content {	
 				width: 152px ;
 				position: relative;
@@ -268,20 +265,19 @@
 			max-width: 1200px;
 			margin: 0 auto;
 		}
-		
-
 		h4, .item .icon:before {
 			text-align: left !important;
 		}
 		h2 {
 			.lib-font-size(24);
-		}af
+		}
 		&-list {
 			text-align: left;
 		}
 		p {
 			.lib-font-size(14);
 		}
+
 	}
 
 	.featured-category {
@@ -303,12 +299,9 @@
     	.promo-item {
 			max-width: 1120px;
 			margin: 0 auto;
-
 		}
 		padding-bottom: 40px;
     }
-
-    
 	
 	.promotions, .featured-category {
 		 h2 {
@@ -320,46 +313,33 @@
 	}
 
 	.services {
-
 		background-color: #f5f4f4;
 		.inner > .col:first-child {
 			position:relative;
 			max-width: 720px;
 			width:100%;
-			
 			min-height: 413px;
-			// > .col {
-			// 	top: -10px;
-			// 	position:relative;
-			// 	+ .col {
-			// 		margin-top: 35px;
-			// 		padding-left: 31px;
-			// 		box-sizing: border-box;
-			// 	}
-			// }
+			.content {
+				z-index: 2;
+			}
 			img {
-					position: relative;
-					z-index: 2;
-					display: none;
-					width: 273px;
-					+ img {
-						display: block;
-						margin: 0 auto;
-						top: 60px;
-						+ img {
-							display: none;
-						}
-					}
+				position: relative;
+				z-index: 2;
+				width: 273px;
+				margin: 0 auto;
+				display: none;
+				top: 60px;
+				&:last-child {
+					display: block;
 				}
+			}
 			&:before {
-				//background-color:  @theme__color__primary;
 				background-image: linear-gradient(rgba(216, 34, 43, 0.9), rgba(216, 34, 43, 0.9)), url('../images/01stokhalldesignhome1280px-bowl-cuisine-delicious-1640773-1.png');
 				background-size: contain;
 				background-position: 50% -54px;
 				position: absolute;
 				left: -20px;
 				width: 100%;
-				max-width: 495px;
 				top:-20px;
 				bottom:0;
 				margin-top: 0;
@@ -367,10 +347,8 @@
 				content: " ";
 				padding: 20px;
 			}
-
 			&:after {
 				position: absolute;
-				max-width: 335px;//495px-80px-80px;
 				min-height: 255px;
 				top:5px;
 				right: 40px;
@@ -379,11 +357,9 @@
 				display: block;
 				content: " ";
 				border: 10px solid #FFF;
-				// box-sizing: border-box;
 				z-index: 1;
 				margin-top: 0;
 			}
-
 		}	
 	
 		.col + .col > .content {
@@ -410,11 +386,9 @@
 						left: 0;
 						background-color: @theme__color__primary;
 					}
-				}
-					
+				}	
 			}	
 		}
-
 	}
 
     .contact-us {
@@ -466,7 +440,6 @@
 				position: relative;
 				overflow:hidden;
 				margin: 13px;
-	
 				&:before {
 					height: 100%;
 					height:0;
@@ -543,7 +516,7 @@
 		margin-bottom: 116px;
 	}
 
-	.about-us,  .services, .blog-list, .faq {
+	.about-us, .services, .blog-list, .faq {
 		h2 {
 			.lib-font-size(24);
 			line-height: 30/24;
@@ -705,37 +678,37 @@
 
 	.services {
 		margin: 90px 0 143px;
-		
 		.inner {
 			max-width: 1440px;
 			margin: 0 auto;
-		}
-		.col {
-			// padding: 30px;
-			// box-sizing: border-box;
 		}
 		.inner > .col:first-child {
 			position:relative;
 			max-width: 720px;
 			width: 50%;
-			> .col {
-				top: -10px;
+			> .content {
+				top: -12px;
 				position:relative;
-				+ .col {
-					margin-top: 35px;
-					padding-left: 31px;
-					box-sizing: border-box;
+				img {
+					width: 48%;
+					display: block;
+					margin: 0 0 26px;
+					top: auto;
+					&:last-child {
+						position:absolute;
+						top:0;
+						right: 0;
+						margin-top:42px;
+					}
 				}
 			}
 			&:before {
-				//background-color:  @theme__color__primary;
 				background-image: linear-gradient(rgba(216, 34, 43, 0.9), rgba(216, 34, 43, 0.9)), url('../images/01stokhalldesignhome1280px-bowl-cuisine-delicious-1640773-1.png');
 				background-size: contain;
 				background-position: 50% -54px;
 				position: absolute;
 				left: 0;
-				width: 100%;
-				max-width: 495px;
+				width: 64%;
 				top:0;
 				bottom:0;
 				margin-top: -90px;
@@ -743,13 +716,11 @@
 				content: " ";
 			}
 			&:after {
-				
 				position: absolute;
-				left: 80px;
-				width: 100%;
-				max-width: 335px;//495px-80px-80px;
+				max-width: inherit;
+				width: 50%;
+				left: 20px; // inner padding
 				top:40px;
-				right: 80px;
 				bottom:40px;
 				display: block;
 				content: " ";
@@ -757,28 +728,9 @@
 				box-sizing: border-box;
 				z-index: 1;
 				margin-top: -90px;
-			}
-			
-		}
-
-		.col:first-child {
-			> .content {
-				top: -10px;
-				img {
-					position: relative;
-					z-index: 2;
-					margin-bottom: 26px;
-					width: 330px;
-					display: inline-block !important;
-					top: auto;
-					&:first-child + img {
-						margin-top: 30px;
-						float: right;
-					}
-				}
+				margin-left: 7%; // 64%-50%/2
 			}
 		}
-
 		.col + .col > .content {
 			text-align: left;
 			padding: 120px 0 120px 90px;
