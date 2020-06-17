@@ -1,3 +1,5 @@
+<?php $cmsBlock = $this->getChildHtml('aboutUs'); if( $cmsBlock ||  $block->getDemo() ) : ?>
+
 <?php $title = $block->getTitle() ? $block->getTitle() : __('About Us') ?>
 <div class="about-us">
 	 <div class="inner">
@@ -7,3 +9,6 @@
 		</div>
 	</div>
 </div>
+
+
+<?php endif ?>

@@ -1,11 +1,11 @@
 <?php $title = $block->getTitle() ? $block->getTitle() : __('Les promotions sont arrivées !') ?>
-    <div class="featured-category widget-tabs-list">
+    <div class="featured-product widget-tabs-list">
         <div class="inner">
-            <div class="featured-category-list">
+            <div class="featured-product-list">
                 <div class="content">
                     <h2 class="featured-title"><?= $title ?></h2>
                     <div data-default-tab-title="<?= __('Categorie') ?>" class="widget-tabs"></div>
-                    <?= $block->getChildHtml('featuredCategoryList') ?>
+                    <?= $block->getChildHtml('featuredProductList') ?>
                 </div>
             </div>
         </div>    
@@ -16,7 +16,7 @@
         'slick'
     ], function ($) {
         $(document).ready(function () {
-            $('.featured-category-list .product-items').slick({
+            $('.featured-product-list .product-items').slick({
                 slidesToShow: 4,
                 responsive: [
                 {

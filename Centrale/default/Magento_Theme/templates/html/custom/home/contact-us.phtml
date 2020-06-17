@@ -1,7 +1,8 @@
+<?php $cmsBlock = $this->getChildHtml('contactUs'); if($cmsBlock) : ?>
 <div class="contact-us">
     <div class="inner">
     	<div class="content">
-    		<?php $cmsBlock = $this->getChildHtml('contactUs'); if($cmsBlock) : ?>
+    		<?php if($cmsBlock) : ?>
 			<?php echo $cmsBlock  ?>
 			<?php else : ?>
             <h2><?= __('Pas encore client ?<br>Créez votre espace en quelques clics') ?></h2>
@@ -10,3 +11,4 @@
     	</div>
     </div>
 </div>
+<?php endif ?>

@@ -1,7 +1,8 @@
- <div class="about-us">
+<?php $cmsBlock = $this->getChildHtml('aboutUs'); if( $cmsBlock ||  $block->getDemo() ) : ?>
+<div class="about-us">
 	<div class="inner">
 		<div class="content">
-			<?php $cmsBlock = $this->getChildHtml('aboutUs'); if($cmsBlock) : ?>
+			<?php if($cmsBlock) : ?>
 			<?php echo $cmsBlock  ?>
 			<?php else : ?>
 			<h2>Central ethnique en quelques mots</h2>
@@ -10,3 +11,4 @@
     	</div>
 	</div>
 </div>
+<?php endif ?>

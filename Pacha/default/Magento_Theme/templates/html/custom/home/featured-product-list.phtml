@@ -1,20 +1,20 @@
-
+<?php $title = $block->getTitle() ? $block->getTitle() : __('Nos produits tendance New York') ?>
     <div class="featured-category featured-image main responsive">
         <div class="inner vertical-align">
             <div class="content">
                 <?php $cmsBlock = $this->getChildHtml('featuredCategory'); if($cmsBlock) : ?>
                 <?php echo $cmsBlock  ?>
                 <?php else : ?>
-                <h2 class="featured-title">Nos produits tendance New York</h2>
+                <h2 class="featured-title"><?= $title ?></h2>
                 <a href="#" class="link link-button button">Voir tous nos produits</a>
                 <img alt="NOS PRODUITS TENDANCE NEW YORK" src="<?php echo $this->getViewFileUrl("images/jakub-kapusnak-296880-unsplash.jpg") ?>">
                 <?php endif ?>
             </div>
         </div>	
     </div>
-    <div class="featured-category-list">
+    <div class="featured-product-list">
         <div class="inner">
-            <?= $block->getChildHtml('featured-category-list') ?>
+            <?= $block->getChildHtml('featuredProductList') ?>
         </div>
     </div>
 	<script>
@@ -23,7 +23,7 @@
         'slick'
     ], function ($) {
         $(document).ready(function () {
-            $('.featured-category-list .product-items').slick({
+            $('.featured-product-list .product-items').slick({
                 slidesToShow: 3,
                 responsive: [
                 {

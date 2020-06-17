@@ -113,10 +113,10 @@
                     </block>
                 </block>
 
-                <block class="Magento\Framework\View\Element\Template" name="home-featured-category" template="Magento_Theme::html/custom/home/featured-category.phtml">
-                    <block class="Magento\Cms\Block\Block" name="home-featured-category-list" as="featured-category-list">
+                <block class="Magento\Framework\View\Element\Template" name="home-featured-product-list" template="Magento_Theme::html/custom/home/featured-product-list.phtml">
+                    <block class="Magento\Cms\Block\Block" name="featured-product-list" as="featuredProductList">
                         <arguments>
-                            <argument name="block_id" xsi:type="string">cen-default-fr-featured-category-list</argument>
+                            <argument name="block_id" xsi:type="string">cen-default-fr-featured-product-list</argument>
                         </arguments>
                     </block>
                 </block>

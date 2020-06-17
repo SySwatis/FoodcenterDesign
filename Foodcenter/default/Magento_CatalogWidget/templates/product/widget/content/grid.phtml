@@ -36,17 +36,16 @@ use Magento\Framework\App\Action\Action;
                 <ol class="product-items <?= /* @noEscape */ $type ?>">
                     <?php $iterator = 1; ?>
                     <?php foreach ($items as $_item): ?>
-
                     <?php
-                        $_getCustomAttr = $_item->getResource()->getAttribute('discount');
-                        // Get Value
-                        $customAttrValue = $_getCustomAttr->getFrontend()->getValue($_item);
-                        // Get Label
-                        $customAttrLabel = $_getCustomAttr->getStoreLabel();
-                        // Html
-                        $htmlDataAttr = !empty($customAttrValue) ? ' data-discount="'.$block->escapeHtml($customAttrValue).'"' : '';
+                        $_product = $_item;
+                        // Discount Label
+                        $htmlDataAttr = '';
+                        $_getCustomAttr = $_product->getResource()->getAttribute('fcg_label');
+                        if($_getCustomAttr) {
+                            $customAttrValue = $_getCustomAttr->getFrontend()->getValue($_product);
+                            $htmlDataAttr = !empty($customAttrValue) ? ' data-discount="'.$block->escapeHtml($customAttrValue).'"' : '';
+                        }
                     ?>
-
 
                         <?= /* @noEscape */ ($iterator++ == 1) ? '<li'.$htmlDataAttr.' class="product-item">' : '</li><li'.$htmlDataAttr.' class="product-item">' ?>
                         <div class="product-item-info">

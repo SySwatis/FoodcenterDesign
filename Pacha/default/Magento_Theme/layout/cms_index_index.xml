@@ -58,7 +58,7 @@
         					<argument name="block_id" xsi:type="string">pac-default-fr-promo</argument>
    						</arguments>
 					</block>
-					<block class="Magento\Framework\View\Element\Template" name="home-promo-item" as="promo-item" template="Magento_Theme::html/custom/home/promo-item.phtml">
+					<block class="Magento\Framework\View\Element\Template" name="home-promo-item" as="promoItemContainer" template="Magento_Theme::html/custom/home/promo-item.phtml">
                         <block class="Magento\Cms\Block\Block" name="promo-item" as="promoItem">
                             <arguments>
                                 <argument name="block_id" xsi:type="string">pac-default-fr-promo-item</argument>
@@ -91,7 +91,7 @@
 
                 </block>
 
-    			<block class="Magento\Framework\View\Element\Template" name="home-featured-category" template="Magento_Theme::html/custom/home/featured-category.phtml">
+    			<block class="Magento\Framework\View\Element\Template" name="home-featured-product-list" template="Magento_Theme::html/custom/home/featured-product-list.phtml">
                     <block class="Magento\Cms\Block\Block" name="featured-category" as="featuredCategory">
                         <arguments>
                             <argument name="block_id" xsi:type="string">pac-default-fr-featured-category</argument>
