@@ -27,9 +27,29 @@
             <container name="home.wrapper" as="homeWrapper" label="Home Wrapper" htmlTag="div" htmlClass="home-wrapper small-list">
 
     			<block class="Magento\Framework\View\Element\Template" name="home-featured" template="Magento_Theme::html/custom/home/featured.phtml">
-                    <block class="Magento\Cms\Block\Block" name="featured" as="featured">
+                    <block class="Magento\Cms\Block\Block" name="featuredLeft" as="featuredLeft">
                         <arguments>
-                            <argument name="block_id" xsi:type="string">sto-default-fr-featured</argument>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-featured-left</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="featured-1" as="featured-1">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-featured-1</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="featured-2" as="featured-2">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-featured-2</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="featured-3" as="featured-3">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-featured-3</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Cms\Block\Block" name="featured-4" as="featured-4">
+                        <arguments>
+                            <argument name="block_id" xsi:type="string">sto-default-fr-featured-4</argument>
                         </arguments>
                     </block>
                 </block>
@@ -105,12 +125,12 @@
                             <argument name="block_id" xsi:type="string">sto-default-fr-blog-item-1</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Cms\Block\Block" name="blog-item-1" as="blog-item-2">
+                    <block class="Magento\Cms\Block\Block" name="blog-item-2" as="blog-item-2">
                         <arguments>
                             <argument name="block_id" xsi:type="string">sto-default-fr-blog-item-2</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Cms\Block\Block" name="blog-item-1" as="blog-item-3">
+                    <block class="Magento\Cms\Block\Block" name="blog-item-3" as="blog-item-3">
                         <arguments>
                             <argument name="block_id" xsi:type="string">sto-default-fr-blog-item-3</argument>
                         </arguments>

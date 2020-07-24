@@ -35,17 +35,17 @@
                 </block>
 
     			<block class="Magento\Framework\View\Element\Template" name="home-process" template="Magento_Theme::html/custom/home/process.phtml">
-                    <block class="Magento\Cms\Block\Block" name="featured" as="featured">
+                    <block class="Magento\Cms\Block\Block" name="process-1" as="process-1">
                         <arguments>
                             <argument name="block_id" xsi:type="string">pac-default-fr-proccess-1</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Cms\Block\Block" name="featured" as="featured">
+                    <block class="Magento\Cms\Block\Block" name="process-2" as="process-2">
                         <arguments>
                             <argument name="block_id" xsi:type="string">pac-default-fr-proccess-2</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Cms\Block\Block" name="featured" as="featured">
+                    <block class="Magento\Cms\Block\Block" name="process-3" as="process-3">
                         <arguments>
                             <argument name="block_id" xsi:type="string">pac-default-fr-proccess-3</argument>
                         </arguments>
