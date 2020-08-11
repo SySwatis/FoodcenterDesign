@@ -47,5 +47,15 @@
             </block>
         </referenceContainer>
 
+        <referenceContainer name="footer-links-bottom">
+            <container name="footer-links-bottom-inner" htmlTag="div" htmlClass="footer-links-bottom-inner" after="-">
+                <block class="Magento\Cms\Block\Block" name="cms-footer-bottom-links">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">cen-default-fr-footer-bottom-links</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+
     </body>
 </page>
