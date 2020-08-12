@@ -10,11 +10,13 @@
             <argument name="category_title" xsi:type="string">Our brands</argument>
         </arguments>
     </referenceBlock>
+
     <move element="boeki-categories-image-slider" destination="home.wrapper" after="home-about-us"/>
     <!-- end Boeki Custom -->
 
     <body>
-      <referenceContainer name="page.top">
+        
+        <referenceContainer name="page.top">
             
             <block class="Magento\Framework\View\Element\Template" name="home-shipping-info" template="Magento_Theme::html/custom/shipping-info.phtml" before="-" />
 
@@ -62,10 +64,6 @@
 
 		    </container>	
 
-    </referenceContainer>
-
-    <referenceContainer name="content">
-		
     </referenceContainer>
 	 
     </body>

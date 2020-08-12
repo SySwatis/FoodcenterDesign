@@ -46,8 +46,8 @@ use Magento\Framework\App\Action\Action;
                             $htmlDataAttr = !empty($customAttrValue) ? ' data-discount="'.$block->escapeHtml($customAttrValue).'"' : '';
                         }
                     ?>
-
-                        <?= /* @noEscape */ ($iterator++ == 1) ? '<li'.$htmlDataAttr.' class="product-item">' : '</li><li'.$htmlDataAttr.' class="product-item">' ?>
+                        <?php $notSalable = !$_item->getIsSalable() ? '' : ' not-sabable'; ?>
+                        <?= /* @noEscape */ ($iterator++ == 1) ? '<li'.$htmlDataAttr.' class="product-item'.$notSalable.'">' : '</li><li'.$htmlDataAttr.' class="product-item'.$notSalable.'">' ?>
                         <div class="product-item-info">
                             <a href="<?= $block->escapeUrl($block->getProductUrl($_item)) ?>" class="product-item-photo">
                                 <?= $block->getImage($_item, $image)->toHtml() ?>

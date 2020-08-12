@@ -5,8 +5,9 @@
     <!-- Boeki_Custom -->
     <referenceBlock name="boeki-categories-image-slider">
          <arguments>
-            <argument name="category_id" xsi:type="string">3</argument>
+            <argument name="category_id" xsi:type="string">41</argument>
             <argument name="limit" xsi:type="string">12</argument>
+            <argument name="sorter" xsi:type="string">position</argument>
             <argument name="category_title" xsi:type="string">Our brands</argument>
         </arguments>
     </referenceBlock>
@@ -32,7 +33,7 @@
                             <argument name="block_id" xsi:type="string">cen-default-fr-featured-left</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Cms\Block\Block" name="featured.right" as="featuredRight">
+                    <block class="Magento\Cms\Block\Block" name="featured-right" as="featuredRight">
                         <arguments>
                             <argument name="block_id" xsi:type="string">cen-default-fr-featured-right</argument>
                         </arguments>
@@ -40,12 +41,12 @@
                 </block>
 
                 <block class="Magento\Framework\View\Element\Template" name="home-reinsurance" template="Magento_Theme::html/custom/home/reinsurance.phtml">
-                     <block class="Magento\Cms\Block\Block" name="reinsurance-left" as="reinsuranceLeft">
+                    <block class="Magento\Cms\Block\Block" name="reinsurance-left" as="reinsuranceLeft">
                         <arguments>
                             <argument name="block_id" xsi:type="string">cen-default-fr-reinsurance-left</argument>
                         </arguments>
                     </block>
-                    <block class="Magento\Cms\Block\Block" name="reinsurance-right" as="reinsuranceRigt">
+                    <block class="Magento\Cms\Block\Block" name="reinsurance-right" as="reinsuranceRight">
                         <arguments>
                             <argument name="block_id" xsi:type="string">cen-default-fr-reinsurance-right</argument>
                         </arguments>

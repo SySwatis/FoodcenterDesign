@@ -27,6 +27,16 @@
                     <argument name="block_id" xsi:type="string">cen-default-fr-featured-menu-image</argument></arguments>
             </block>
         </referenceBlock>
+
+        <referenceBlock name="header.link-item-2" remove="true"/>
+        <referenceBlock name="header.link-item-3" remove="true"/>
+        <referenceContainer name="cms-links-wrapper">
+            <block class="Magento\Cms\Block\Block" name="cms.header.links" as="shippingInfo">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">cen-default-fr-cms-header-links</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
         
         <!-- <move element="brands-list" destination="footer-container" after="form.subscribe"/> -->
         <referenceContainer name="cms-links-footer-container" remove="true"/>

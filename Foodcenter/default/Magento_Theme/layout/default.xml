@@ -11,6 +11,8 @@
     <move element="boeki-custom-footer-address"  destination="footer-logo-address-copyright" before="copyright-address"/>
     <!-- end Boeki Custom -->
 
+     <move element="page.messages" destination="page.top"  before="-"/>
+
     <head>
         <link src="https://fonts.googleapis.com/css?family=Work+Sans" src_type="url" rel="stylesheet" type="text/css" />
     </head>
