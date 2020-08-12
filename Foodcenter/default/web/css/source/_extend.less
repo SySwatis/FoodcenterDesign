@@ -154,10 +154,17 @@
 
     // Navigation
 
-    .navigation .boe-menu-icons {
-    	&:before {
-    		text-shadow: 0 0 0 #000;
+    .navigation {
+    	.has-active .boe-menu-icons {
+	    	&:before {
+	    		text-shadow: 0 0 0 #fff;
+	    	}
     	}
+    	.boe-menu-icons {
+        	&:before {
+        		text-shadow: 0 0 0 #000;
+        	}
+        }
     }
 
     // Title
