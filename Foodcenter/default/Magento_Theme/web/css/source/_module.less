@@ -96,8 +96,31 @@
        
     }
 
-    .page-header  + .page.messages .message {
+    .page.messages .message {
         margin-bottom: 0;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 9;
+    }
+
+     .page.messages .message {
+        .lib-icon-font(
+            @_icon-font-content: @icon-close,
+            @_icon-font-color: @primary__color__lighter,
+            @_icon-font-size: @icon-font-size,
+            @_icon-font-line-height: @icon-font-size,
+            @_icon-font-display: block,
+            @_icon-font-text-hide: true,
+        );
+        &:before {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 8px;
+            cursor: pointer;
+        }
     }
 
     .page-main {

@@ -23,6 +23,10 @@ function($) {
             $('.category-description').toggleClass('expanded');
         });
 
+        $('.page.messages.initial').on('click',function(){
+            $(this).find('.message').remove();
+        });
+
         if($('.catalog-product-view').length){ 
 
             $('.qty .control').append('<div class="qty-button qty-up">+</div><div class="qty-button qty-down">-</div>');
