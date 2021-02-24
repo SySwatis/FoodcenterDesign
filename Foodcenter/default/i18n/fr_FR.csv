@@ -13,3 +13,5 @@
 "Ascending","Croissant",module,Magento_Catalog
 "Descending","Décroissant",module,Magento_Catalog
 "The requested qty is not available","La quantité demandée n'est pas disponible"
+"Out of stock","En cours d'approvisionnement"
+"Thank your for waiting, we are preparing your order for shipment","Encore quelques secondes, nous calculons votre commande pour l'expédition"

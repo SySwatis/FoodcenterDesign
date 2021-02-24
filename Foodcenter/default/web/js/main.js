@@ -40,8 +40,6 @@ function($) {
                 max = input.attr('max'),
                 dataValidate = input.data('validate'),
                 qtyIncrements = dataValidate['validate-item-quantity'].qtyIncrements ? dataValidate['validate-item-quantity'].qtyIncrements : 1;
-                
-                input.attr('readonly',true);
 
                 btnUp.click(function() {
                     var oldValue = parseFloat(input.val());
