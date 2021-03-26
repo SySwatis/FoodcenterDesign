@@ -1,7 +1,7 @@
 define([
     'jquery',
     'jquery/ui',
-    'mage/menu' ],
+    'mage/menu'],
     function($){
         $.widget('foodcenter.menu', $.mage.menu, {
 
