@@ -17,4 +17,11 @@ var config = {
     deps: [
         "js/main",
     ],
+	"config":{
+        "mixins": {
+            "Magento_Theme/js/view/messages": {
+                "js/messages-custom":true
+            }
+        }
+    }
 };
